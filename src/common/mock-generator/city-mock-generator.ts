@@ -1,7 +1,7 @@
 import { MockData } from '../../types/mock-data.type.js';
-import { MockGenerator } from './mock-generator.interface.js';
+import { MockGeneratorInterface } from './mock-generator.interface.js';
 
-export default class CityMockGenerator implements MockGenerator {
+export default class CityMockGenerator implements MockGeneratorInterface {
   constructor(private readonly mockData: MockData) {}
 
   public generate(): string {
