@@ -1,8 +1,8 @@
 import { readFileSync } from 'fs';
-import { City } from '../types/city.enum.js';
-import { Feature } from '../types/feature.enum.js';
-import { Logging } from '../types/logging.enum.js';
-import { Offer } from '../types/offer.type.js';
+import { City } from '../../types/city.enum.js';
+import { Feature } from '../../types/feature.enum.js';
+import { Logging } from '../../types/logging.enum.js';
+import { Offer } from '../../types/offer.type.js';
 import { FileReader } from './file-reader.interface.js';
 
 export default class TSVFileReader implements FileReader {
