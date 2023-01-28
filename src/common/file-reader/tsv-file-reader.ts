@@ -3,9 +3,9 @@ import { City } from '../../types/city.enum.js';
 import { Feature } from '../../types/feature.enum.js';
 import { Logging } from '../../types/logging.enum.js';
 import { Offer } from '../../types/offer.type.js';
-import { FileReader } from './file-reader.interface.js';
+import { FileReaderInterface } from './file-reader.interface.js';
 
-export default class TSVFileReader implements FileReader {
+export default class TSVFileReader implements FileReaderInterface {
   private rawData = '';
 
   constructor(public filename: string) {}

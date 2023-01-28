@@ -1,3 +1,3 @@
-export interface MockGenerator {
+export interface MockGeneratorInterface {
   generate(): string;
 }

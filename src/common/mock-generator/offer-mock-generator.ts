@@ -9,13 +9,13 @@ import {
   getRandomItem,
   getRandomItems
 } from '../../utils/random.js';
-import {MockGenerator} from './mock-generator.interface.js';
+import {MockGeneratorInterface} from './mock-generator.interface.js';
 
 const MIN_DATE = '20230101';
 const MAX_DATE = '20220901';
 const LOCATION_THRESHOLD = 0.05;
 
-export default class OfferMockGenerator implements MockGenerator {
+export default class OfferMockGenerator implements MockGeneratorInterface {
   constructor(private readonly mockData: MockData) {}
 
   public generate(): string {
