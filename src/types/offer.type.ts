@@ -1,24 +1,24 @@
 import { City } from './city.enum.js';
 import { Feature } from './feature.enum.js';
 import { Location } from './location.type.js';
-import { Logging } from './logging.enum.js';
+import { Lodging } from './lodging.enum.js';
 import { User } from './user.type.js';
 
 export type Offer = {
   title: string;
   description: string;
   postDate: Date;
-  city?: City;
+  city: City;
   preview: string;
   photos: string[];
   isPremium: boolean;
-  rating: number;
-  logging: Logging;
+  rating?: number;
+  lodging: Lodging;
   roomsCount: number;
   guestsCount: number;
   price: number;
   features: Feature[];
   host?: User;
-  commentsCount: number;
-  address: Location;
+  commentsCount?: number;
+  location: Location;
 }

@@ -1,6 +1,7 @@
 import { CommentRatingValue } from '../../const/const.index.js';
 import { MockData } from '../../types/mock-data.type.js';
-import { generateRandomValue, getRandomItem } from '../../utils/random.js';
+import { generateRandomDate, generateRandomValue, getRandomItem } from '../../utils/random.js';
+import { PostDateRange } from './mock-generator.const.js';
 import { MockGeneratorInterface } from './mock-generator.interface.js';
 
 export default class CommentMockGenerator implements MockGeneratorInterface {
@@ -8,8 +9,9 @@ export default class CommentMockGenerator implements MockGeneratorInterface {
 
   public generate(): string {
     const text = getRandomItem<string>(this.mockData.comments);
+    const postDate = generateRandomDate(PostDateRange.Min, PostDateRange.Max);
     const rating = generateRandomValue(CommentRatingValue.Min, CommentRatingValue.Max).toString();
 
-    return [text, rating,].join('\t');
+    return [text, postDate, rating,].join('\t');
   }
 }

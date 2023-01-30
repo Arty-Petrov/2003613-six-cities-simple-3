@@ -1,4 +1,4 @@
-export enum Logging {
+export enum Lodging {
   Apartment = 'apartment',
   House = 'house',
   Room = 'room',
