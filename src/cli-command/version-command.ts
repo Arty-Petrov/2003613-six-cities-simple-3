@@ -1,7 +1,7 @@
 import { readFileSync } from 'fs';
-import { CliCommand } from './cli-command.interface.js';
+import { CliCommandInterface } from './cli-command.interface.js';
 
-export default class VersionCommand implements CliCommand {
+export default class VersionCommand implements CliCommandInterface {
   readonly name = '--version';
   private readVersion(): string {
     const contentPageJSON = readFileSync('./package.json', 'utf-8');

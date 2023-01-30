@@ -1,17 +1,16 @@
 import got from 'got';
 import TSVFileWriter from '../common/file-writer/file-writer.js';
-import CityMockGenerator from '../common/mock-generator/city-mock-generator.js';
-import UserMockGenerator from '../common/mock-generator/user-mock-generator.js';
-import OfferMockGenerator from '../common/mock-generator/offer-mock-generator.js';
 import CommentMockGenerator from '../common/mock-generator/comment-mock-generator.js';
+import OfferMockGenerator from '../common/mock-generator/offer-mock-generator.js';
+import UserMockGenerator from '../common/mock-generator/user-mock-generator.js';
 import { MockPaths } from '../const/const.index.js';
-import {MockData} from '../types/mock-data.type.js';
-import {CliCommand} from './cli-command.interface.js';
+import { MockData } from '../types/mock-data.type.js';
+import { CliCommandInterface } from './cli-command.interface.js';
 
 const COMMENTS_RATIO = 5;
 const USERS_RATIO = 0.25;
 
-export default class GenerateCommand implements CliCommand {
+export default class GenerateCommand implements CliCommandInterface {
   public readonly name = '--generate';
   private initialData!: MockData;
 
@@ -25,12 +24,6 @@ export default class GenerateCommand implements CliCommand {
       return console.log(`Can't fetch data from ${url}.`);
     }
     const genQueue = [
-      {
-        count: 1,
-        generatorString: new CityMockGenerator(this.initialData),
-        tsvFileWriter: new TSVFileWriter(dist.trim() + MockPaths.City),
-        outputName: MockPaths.City,
-      },
       {
         count: baseCount * USERS_RATIO,
         generatorString: new UserMockGenerator(this.initialData),

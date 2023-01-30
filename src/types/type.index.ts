@@ -1,3 +1,4 @@
+export * from './comment.type.js';
 export * from './location.type.js';
 export * from './mock-data.type.js';
 export * from './offer.type.js';

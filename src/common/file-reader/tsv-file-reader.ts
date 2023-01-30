@@ -1,59 +1,33 @@
-import { readFileSync } from 'fs';
-import { City } from '../../types/city.enum.js';
-import { Feature } from '../../types/feature.enum.js';
-import { Logging } from '../../types/logging.enum.js';
-import { Offer } from '../../types/offer.type.js';
+import EventEmitter from 'events';
+import { createReadStream } from 'fs';
 import { FileReaderInterface } from './file-reader.interface.js';
 
-export default class TSVFileReader implements FileReaderInterface {
-  private rawData = '';
-
-  constructor(public filename: string) {}
-
-  public read(): void{
-    this.rawData = readFileSync(this.filename, {encoding: 'utf-8'});
+export default class TSVFileReader extends EventEmitter implements FileReaderInterface {
+  constructor(public filename: string) {
+    super();
   }
 
-  public toArray(): Offer[]{
-    if (!this.rawData) {
-      return [];
+  public async read(): Promise<void> {
+    const stream = createReadStream(this.filename, {
+      highWaterMark: 16384,
+      encoding: 'utf-8',
+    });
+    let lineRead = '';
+    let endLinePosition = -1;
+    let importedRowCount = 0;
+
+    for await (const chunk of stream) {
+      lineRead += chunk.toString();
+
+      while ((endLinePosition = lineRead.indexOf('\n')) >= 0) {
+        const completeRow = lineRead.slice(0, endLinePosition + 1);
+        lineRead = lineRead.slice(++endLinePosition);
+        importedRowCount++;
+        await new Promise((resolve) => {
+          this.emit('line', completeRow, resolve);
+        });
+      }
     }
-    return this.rawData
-      .split('\n')
-      .filter((row) => row.trim() !== '')
-      .map((line) => line.split('\t'))
-      .map(([
-        title, description, createdDate, cityName,
-        preview, photos, premium, rating,
-        type, rooms, guests, price, features, name,
-        email, avatarUrl, password, isPro, commentsCount,
-        latitude, longitude,
-      ]) => ({
-        title,
-        description,
-        postDate: new Date(createdDate),
-        city: City[cityName as keyof typeof City],
-        preview,
-        photos: photos.split(';'),
-        isPremium: !!premium,
-        rating: Number.parseInt(rating, 10),
-        logging: Logging[type as keyof typeof Logging],
-        roomsCount: Number.parseInt(rooms, 10),
-        guestsCount: Number.parseInt(guests, 10),
-        price: Number.parseInt(price, 10),
-        features: features.split(';').map((feature) => Feature[feature as keyof typeof Feature]),
-        host: {
-          name,
-          email,
-          avatarUrl,
-          password,
-          isPro: !!isPro
-        },
-        commentsCount: Number.parseInt(commentsCount, 10),
-        address: {
-          latitude: Number.parseFloat(latitude),
-          longitude: Number.parseFloat(longitude)
-        }
-      }));
+    this.emit('end', importedRowCount);
   }
 }
