@@ -1,18 +1,42 @@
+import express, { Express } from 'express';
 import { inject, injectable } from 'inversify';
 import 'reflect-metadata';
 import { ConfigInterface } from '../common/config/config.interface.js';
+import { ControllerInterface } from '../common/controller/controller.interface.js';
 import { DatabaseInterface } from '../common/database-client/database.interface.js';
+import { ExceptionFilterInterface } from '../common/errors/exception-filter.interface.js';
 import { LoggerInterface } from '../common/logger/logger.interface.js';
 import { Component } from '../types/type.index.js';
 import { getURI } from '../utils/db.js';
 
 @injectable()
 export default class Application {
+  private expressApp: Express;
   constructor(
     @inject(Component.LoggerInterface) private logger: LoggerInterface,
     @inject(Component.ConfigInterface) private config: ConfigInterface,
-    @inject(Component.DatabaseInterface) private databaseClient: DatabaseInterface
-  ) {}
+    @inject(Component.DatabaseInterface) private databaseClient: DatabaseInterface,
+    @inject(Component.ExceptionFilterInterface) private exceptionFilter: ExceptionFilterInterface,
+    @inject(Component.CommentController) private commentController: ControllerInterface,
+    @inject(Component.OfferController) private offerController: ControllerInterface,
+    @inject(Component.UserController) private userController: ControllerInterface,
+  ) {
+    this.expressApp = express();
+  }
+
+  public initExceptionFilters() {
+    this.expressApp.use(this.exceptionFilter.catch.bind(this.exceptionFilter));
+  }
+
+  public initRoutes() {
+    this.expressApp.use('/comments', this.commentController.router);
+    this.expressApp.use('/offers', this.offerController.router);
+    this.expressApp.use('/users', this.userController.router);
+  }
+
+  public initMiddleware() {
+    this.expressApp.use(express.json());
+  }
 
   public async init() {
     this.logger.info('Application initialization…');
@@ -27,5 +51,11 @@ export default class Application {
     );
 
     await this.databaseClient.connect(uri);
+
+    this.initExceptionFilters();
+    this.initMiddleware();
+    this.initRoutes();
+    this.expressApp.listen(this.config.get('PORT'));
+    this.logger.info(`Server started on http://localhost:${this.config.get('PORT')}`);
   }
 }

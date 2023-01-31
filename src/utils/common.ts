@@ -1,3 +1,4 @@
+import { ClassConstructor, plainToInstance } from 'class-transformer';
 import * as crypto from 'crypto';
 import { City } from '../types/city.enum.js';
 import { Feature } from '../types/feature.enum.js';
@@ -63,3 +64,10 @@ export const createSHA256 = (line: string, salt: string): string => {
   const shaHasher = crypto.createHmac('sha256', salt);
   return shaHasher.update(line).digest('hex');
 };
+
+export const createErrorObject = (message: string) => ({
+  error: message,
+});
+
+export const fillDTO = <T, V>(someDto: ClassConstructor<T>, plainObject: V) =>
+  plainToInstance(someDto, plainObject, {excludeExtraneousValues: true});

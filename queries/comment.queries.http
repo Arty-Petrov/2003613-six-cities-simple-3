@@ -1,0 +1,11 @@
+#@name CREATE NEW COMMENT
+POST {{baseUrl}}/comments/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "text": "Как обстоят дела с коробками? Фирменная упаковка сохранена?",
+  "rating": 4,
+  "offerId": "635bf92bc0711f773551cd46",
+  "userId": "635bc7fc426b0cf925300c2e"
+}
+###
