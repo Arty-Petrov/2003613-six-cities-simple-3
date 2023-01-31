@@ -1,0 +1,53 @@
+#@name CREATE NEW OFFER
+POST {{baseUrl}}/offers/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "Билли Саммерс",
+  "description": "У нас тут все ништяк. Ларек за углом. Шава 24 часа. Приезжайте! Интернетов нет!",
+  "city": "Paris",
+  "preview": "felix-fuchs-PXAcac16eJQ.jpg",
+  "photos": [
+    "brandon-hoogenboom-SNxQGWxZQi0.jpg",
+    "cameron-venti-R64qgQ6rr_o.jpg",
+    "claire-rendall-b6kAwr1i0Iw.jpg",
+    "ducminh-nguyen-hG3H6N6VwCY.jpg"
+    ],
+  "isPremium": true,
+  "lodging": "apartment",
+  "roomsCount": 2,
+  "guestsCount": 6,
+  "price": 75161,
+  "features": ["Washer","Towels","Fridge"],
+  "hostId": "63597a7e95a2767ad5fdc1ac",
+  "location": {
+    "latitude": 40.88414,
+    "longitude": 142.793509
+    }
+}
+> {% client.global.set("offerId", response.body.id); %}
+###
+
+#@name GET OFFERS BY QUERY
+GET {{baseUrl}}/offers?count=5&city=Paris&premium=true HTTP/1.1
+###
+
+#@name GET OFFER BY ID
+GET {{baseUrl}}/users/offers/{{offerId}} HTTP/1.1
+###
+
+#@name UPDATE OFFER
+
+PATCH {{baseUrl}}/offers/{{offerId}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "Небольшая лавочка в парке!!!",
+  "description": "Тут красиво, светло и уютно. Есть где разместиться компании из 5 человек. Кофе и печеньки бесплатно.",
+  "price": 1100
+}
+###
+
+#@name DELETE OFFER
+DELETE {{baseUrl}}/offers/{{offerId}} HTTP/1.1
+###
