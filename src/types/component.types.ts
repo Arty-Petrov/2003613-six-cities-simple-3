@@ -1,8 +1,9 @@
 export const Component = {
   Application: Symbol.for('Application'),
-  LoggerInterface: Symbol.for('LoggerInterface'),
   ConfigInterface: Symbol.for('ConfigInterface'),
+  LoggerInterface: Symbol.for('LoggerInterface'),
   DatabaseInterface: Symbol.for('DatabaseInterface'),
+  ExceptionFilterInterface: Symbol.for('ExceptionFilterInterface'),
   UserServiceInterface: Symbol.for('UserServiceInterface'),
   UserModel: Symbol.for('UserModel'),
   OfferServiceInterface: Symbol.for('OfferServiceInterface'),
