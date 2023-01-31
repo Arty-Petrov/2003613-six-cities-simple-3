@@ -30,6 +30,20 @@ paths:
           schema:
             type: number
             example: 80
+        - name: city
+          in: query
+          description: Объявления в указанном по городе.
+          required: false
+          schema:
+            type: string
+            example: "Paris"
+        - name: premium
+          in: query
+          description: Премиальные объявления.
+          required: false
+          schema:
+            type: boolean
+            example: "true"
       responses:
         "200":
           description: Список предложений.
@@ -196,120 +210,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/AuthErrorMessage'
-
-  /favorite:
-    get:
-      tags:
-        - offers
-      summary: Получение списка избранных предложений.
-      description: Сервис возвращает список избранных предложений пользователя. Ресурс доступен только авторизованным клиентам.
-      parameters:
-        - name: X-Token
-          in: header
-          description: Токен авторизации пользователя.
-          required: true
-          schema:
-            type: string
-            example: tDBrmkMbToBPh7B6fhqswCEU
-      responses:
-        "200":
-          description: Список избранных предложений.
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  type: object
-                  allOf:
-                    - type: object
-                    - $ref: '#/components/schemas/shortOffer'
-        "401":
-          description: Пользователь не авторизован.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/AuthErrorMessage'
-
-  /favorite/{offerId}/{status}:
-    post:
-      tags:
-        - offers
-      summary: Добавление/удаление предложения по аренде в/из пользовательского списка "Избранное".
-      description: Сервис изменяет статус поля favorite у предложения по аренде. Сервис доступен авторизованным клиентам.
-      parameters:
-        - name: X-Token
-          in: header
-          description: Токен авторизации пользователя.
-          required: true
-          schema:
-            type: string
-            example: tDBrmkMbToBPh7B6fhqswCEU
-        - name: offerId
-          in: path
-          description: ID предложения.
-          required: true
-          schema:
-            type: string
-            example: tDBrmkMbToBPh7B6fhqswCEU
-        - name: action
-          in: query
-          description: Тип действия 1 — добавить в список избранных, 0 — удалить из списка избранных.
-          required: true
-          schema:
-            type: number
-            example: 1
-      responses:
-        "200":
-          description: Статус предложения обновлен. Обновленный объект предложения.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/offer'
-        "401":
-          description: Пользователь не авторизован.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/AuthErrorMessage'
-        "404":
-          description: Предложение не найдено.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/NotFoundErrorMessage'
-
-  /premium{city}:
-    get:
-      tags:
-        - offers
-      summary: Получение списка премиальных предложений.
-      description: Сервис возвращает список из максимум 3 предложений с флагом «Premium» отсортированный по убыванию значения поля дата публикации. Ресурс доступен авторизованным и анонимным пользователям.
-      parameters:
-        - name: city
-          in: path
-          description: Название города.
-          required: true
-          schema:
-            type: string
-            example: Paris
-      responses:
-        "200":
-          description: Список премиальных предложений.
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  type: object
-                  allOf:
-                    - type: object
-                    - $ref: '#/components/schemas/shortOffer'
-        "404":
-          description: Ошибка данных, нет такого города.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/NotFoundErrorMessage'
 
   /users:
     get:
@@ -605,10 +505,7 @@ components:
         isPremium:
           type: boolean
           example: true
-        isFavorite:
-          type: boolean
-          example: true
-        offerType:
+        lodging:
           type: string
           example: house
         roomsCount:
@@ -628,12 +525,12 @@ components:
         hostId:
           type: string
           example: tDBrmkMbToBPh7B6fhqswCEU
-        longitude:
-          type: number
-          example: 39.808463
-        latitude:
-          type: number
-          example: 142.636998
+        location:
+          type: object
+          example: {
+            longitude: 39.808463,
+            latitude: 142.636998,
+          }
 
     offer:
       type: object
@@ -664,9 +561,6 @@ components:
         isPremium:
           type: boolean
           example: true
-        isFavorite:
-          type: boolean
-          example: true
         rating:
           type: number
           example: 3.8
@@ -690,12 +584,12 @@ components:
         commentsCount:
           type: number
           example: 12
-        longitude:
-          type: number
-          example: 39.808463
-        latitude:
-          type: number
-          example: 142.636998
+        location:
+          type: object
+          example: {
+            longitude: 39.808463,
+            latitude: 142.636998,
+          }
 
     shortOffer:
       type: object
@@ -718,13 +612,10 @@ components:
         isPremium:
           type: boolean
           example: true
-        isFavorite:
-          type: boolean
-          example: true
         rating:
           type: number
           example: 3.8
-        offerType:
+        lodging:
           type: string
           example: house
         price:
@@ -740,9 +631,6 @@ components:
         text:
           type: string
           example: Прекрасное место, приедем еще!
-        postDate:
-          type: string
-          example: 2022-08-12T21:00:00.000Z
         rating:
           type: number
           example: 3.8
@@ -767,7 +655,7 @@ components:
           example: 2022-08-12T21:00:00.000Z
         rating:
           type: number
-          example: 3.8
+          example: 3
         userId:
           type: string
           example: tDBrmkMbToBPh7B6fhqswCEU

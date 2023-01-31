@@ -107,7 +107,7 @@ export default class ImportCommand implements CliCommandInterface {
   private async saveComment(comment: Comment): Promise<void> {
     const offerId = getRandomItem(this.offerIdList);
     const userId = getRandomItem(this.userIdList);
-    await this.commentService.createComment({
+    await this.commentService.create({
       ...comment,
       userId: userId,
       offerId: offerId,

@@ -10,7 +10,6 @@ export default class CreateOfferDto {
   public preview!: string;
   public photos!: string[];
   public isPremium!: boolean;
-  public rating?: number;
   public lodging!: Lodging;
   public roomsCount!: number;
   public guestsCount!: number;

@@ -1,3 +1,7 @@
+export const UserDefault = {
+  AvatarFileName: 'default-avatar.jpg',
+} as const;
+
 export const NameLength = {
   Min: 1,
   Max: 15,

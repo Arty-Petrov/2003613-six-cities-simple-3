@@ -1,5 +1,8 @@
-export const RATING_DEFAULT = 1;
-export const COMMENTS_COUNT_DEFAULT = 0;
+export const OfferDefault = {
+  CommentsCount: 0,
+  ListCount: 60,
+  Rating: 1,
+} as const;
 
 export const TitleLength = {
   Min: 10,
