@@ -2,7 +2,6 @@ import typegoose, { defaultClasses, getModelForClass } from '@typegoose/typegoos
 import { User } from '../../types/user.type.js';
 import { createSHA256 } from '../../utils/common.js';
 
-
 const {prop, modelOptions} = typegoose;
 
 export interface UserEntity extends defaultClasses.Base {}
@@ -19,21 +18,26 @@ export class UserEntity extends defaultClasses.TimeStamps implements User {
     default: '',
   })
   public name!: string;
+
   @prop({
     unique: true,
     required: true,
   })
   public email!: string;
+
   @prop({
     required: true,
     default: '',
   })
+
   public avatarUrl!: string;
+
   @prop({
     required: true,
     default: false,
   })
   public isPro!: boolean;
+
   @prop({
     required: true,
     trim: true,

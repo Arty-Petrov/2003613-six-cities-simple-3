@@ -5,6 +5,7 @@ Content-Type: application/json
 {
   "title": "Билли Саммерс",
   "description": "У нас тут все ништяк. Ларек за углом. Шава 24 часа. Приезжайте! Интернетов нет!",
+  "postDate": "2021-02-01T11:56:37.573Z",
   "city": "Paris",
   "preview": "felix-fuchs-PXAcac16eJQ.jpg",
   "photos": [
@@ -33,7 +34,7 @@ GET {{baseUrl}}/offers?count=5&city=Paris&premium=true HTTP/1.1
 ###
 
 #@name GET OFFER BY ID
-GET {{baseUrl}}/users/offers/{{offerId}} HTTP/1.1
+GET {{baseUrl}}/offers/{{offerId}} HTTP/1.1
 ###
 
 #@name UPDATE OFFER
