@@ -30,7 +30,7 @@ export const createOffer = (row: string): Offer => {
     city: City[cityName as keyof typeof City],
     preview,
     photos: photos.split(';'),
-    isPremium: !!isPremium,
+    isPremium: isPremium as unknown as boolean,
     lodging: lodgingName as Lodging,
     roomsCount: Number.parseInt(roomsCount,10),
     guestsCount: Number.parseInt(guestsCount,10),
@@ -52,7 +52,7 @@ export const createUser = (row: string) => {
     name: name,
     email: email,
     avatarUrl: avatarUrl,
-    isPro: !!isPro,
+    isPro: Boolean(isPro),
   };
 };
 

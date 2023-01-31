@@ -134,9 +134,8 @@ export default class ImportCommand implements CliCommandInterface {
     resolve();
   }
 
-  private async onComplete(count: number, resolve: () => void) {
+  private async onComplete(count: number) {
     console.log(`${count} rows imported.`);
     await this.databaseService.disconnect();
-    resolve();
   }
 }
