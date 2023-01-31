@@ -4,7 +4,7 @@ import { Feature } from '../../types/feature.enum.js';
 import { Location } from '../../types/location.type.js';
 import { Lodging } from '../../types/lodging.enum.js';
 import { UserEntity } from '../user/user.entity.js';
-import { COMMENTS_COUNT_DEFAULT, RATING_DEFAULT, TitleLength } from './offer.const.js';
+import { OfferDefault, TitleLength } from './offer.constant.js';
 
 const {prop, modelOptions} = typegoose;
 
@@ -55,14 +55,8 @@ export class OfferEntity extends defaultClasses.TimeStamps {
   public isPremium!: boolean;
 
   @prop({
-    required: true,
-    default: false,
-  })
-  public isFavorite!: boolean;
-
-  @prop({
     required: false,
-    default: RATING_DEFAULT,
+    default: OfferDefault.Rating,
   })
   public rating!: number;
 
@@ -102,7 +96,7 @@ export class OfferEntity extends defaultClasses.TimeStamps {
 
   @prop({
     required: false,
-    default: COMMENTS_COUNT_DEFAULT,
+    default: OfferDefault.CommentsCount,
   })
   public commentsCount!: number;
 

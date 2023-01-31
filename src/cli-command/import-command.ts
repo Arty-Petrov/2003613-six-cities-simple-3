@@ -107,7 +107,7 @@ export default class ImportCommand implements CliCommandInterface {
   private async saveComment(comment: Comment): Promise<void> {
     const offerId = getRandomItem(this.offerIdList);
     const userId = getRandomItem(this.userIdList);
-    await this.commentService.createComment({
+    await this.commentService.create({
       ...comment,
       userId: userId,
       offerId: offerId,
@@ -134,9 +134,8 @@ export default class ImportCommand implements CliCommandInterface {
     resolve();
   }
 
-  private async onComplete(count: number, resolve: () => void) {
+  private async onComplete(count: number) {
     console.log(`${count} rows imported.`);
     await this.databaseService.disconnect();
-    resolve();
   }
 }

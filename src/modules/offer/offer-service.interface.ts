@@ -1,10 +1,17 @@
 import { DocumentType } from '@typegoose/typegoose';
 import CreateOfferDto from './dto/create-offer.dto.js';
 import UpdateCommentDataDto from './dto/update-comment-data.dto.js';
+import UpdateOfferDto from './dto/update-offer.dto.js';
 import { OfferEntity } from './offer.entity.js';
+import OfferQuery from './query/offer.query.js';
 
 export interface OfferServiceInterface {
-  create(dto: CreateOfferDto): Promise<DocumentType<OfferEntity>>;
+  create(dto: CreateOfferDto): Promise<DocumentType<OfferEntity | null>>;
+  exists(offerId: string): Promise<boolean>;
+  find(query: OfferQuery): Promise<DocumentType<OfferEntity>[]>;
   findById(offerId: string): Promise<DocumentType<OfferEntity> | null>;
-  updateCommentData(dto: UpdateCommentDataDto): Promise<DocumentType<OfferEntity> | null>;
+  updateById(offerId: string, dto: UpdateOfferDto): Promise<DocumentType<OfferEntity> | null>;
+  deleteById(offerId: string): Promise<DocumentType<OfferEntity> | null>;
+  updateCommentData(dto: UpdateCommentDataDto): Promise<void>;
+  checkOwnership(userId: string, offerId: string): Promise<boolean>;
 }
