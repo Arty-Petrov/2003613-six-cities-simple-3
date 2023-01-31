@@ -1,0 +1,20 @@
+#@name REGISTER NEW USER
+POST {{baseUrl}}/users/register HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Jack",
+  "email": "toranss@overlook.net",
+  "isPro": true,
+  "password": "123456"
+}
+###
+#@name USER LOGIN
+POST {{baseUrl}}/users/login HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "host@mir.local",
+  "password": "123456"
+}
+###
