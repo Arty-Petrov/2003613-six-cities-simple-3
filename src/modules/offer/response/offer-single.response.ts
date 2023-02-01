@@ -1,8 +1,8 @@
-import { Expose } from 'class-transformer';
+import { Expose, Transform } from 'class-transformer';
 import { Lodging } from '../../../types/lodging.enum.js';
 
-export default class OfferShortResponse {
-  @Expose()
+export default class OfferSingleResponse {
+  @Expose({name: '_id'})
   public id!: string;
 
   @Expose()
@@ -15,7 +15,15 @@ export default class OfferShortResponse {
   public city!: string;
 
   @Expose()
+  @Transform(({ value }) => `http://localhost:4000/upload/preview/${value}`)
   public preview!: string;
+
+  @Expose()
+  @Transform(({value}) => {
+    const fileNames = value as string[];
+    return fileNames.map((item) => `http://localhost:4000/upload/photos/${item}`);
+  })
+  public photos!: string[];
 
   @Expose()
   public isPremium!: boolean;

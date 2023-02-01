@@ -1,20 +1,140 @@
+import { Type } from 'class-transformer';
+import {
+  ArrayMaxSize,
+  ArrayNotEmpty,
+  IsArray,
+  IsBoolean,
+  IsDateString,
+  IsDefined,
+  IsEnum,
+  IsInt,
+  IsMongoId,
+  IsNotEmptyObject,
+  IsObject,
+  Length,
+  Matches,
+  Max,
+  Min,
+  ValidateNested,
+} from 'class-validator';
 import { City } from '../../../types/city.enum.js';
+import { Feature } from '../../../types/feature.enum.js';
 import { Location } from '../../../types/location.type.js';
 import { Lodging } from '../../../types/lodging.enum.js';
+import {
+  DescriptionLength,
+  GuestsRange,
+  OFFER_IMAGE_TYPE_REGEXP,
+  OfferApiError,
+  OfferDefault,
+  PriceRange,
+  RoomsRange,
+  TitleLength,
+} from '../offer.constant.js';
+import LocationDto from './location.dto.js';
 
 export default class CreateOfferDto {
+  @Length(TitleLength.Min, TitleLength.Max, {
+    message: OfferApiError.TitleIsInvalid
+  })
   public title!: string;
+
+  @Length(DescriptionLength.Min, DescriptionLength.Max, {
+    message: OfferApiError.DescriptionIsInvalid
+  })
   public description!: string;
+
+  @IsDateString({}, {
+    message: OfferApiError.PostDateIsInvalid
+  })
   public postDate!: Date;
+
+  @IsEnum(City, {
+    message: OfferApiError.CityIsInvalid
+  })
   public city!: City;
+
+  @Matches(OFFER_IMAGE_TYPE_REGEXP, {
+    message: OfferApiError.PreviewIsWrongFormat
+  })
   public preview!: string;
+
+  @IsArray({
+    message:OfferApiError.PhotosIsNotArray
+  })
+  @ArrayNotEmpty({
+    message: OfferApiError.PhotosArrayIsEmpty
+  })
+  @ArrayMaxSize(OfferDefault.PhotosCount, {
+    message: OfferApiError.PhotosArrayLengthIsWrong
+  })
+  @Matches(OFFER_IMAGE_TYPE_REGEXP, {
+    each: true,
+    message: OfferApiError.PhotoIsWrongFormat })
   public photos!: string[];
+
+  @IsBoolean()
   public isPremium!: boolean;
+
+  @IsEnum(Lodging, {
+    each: true,
+    message: OfferApiError.LodgingIsInvalid
+  })
   public lodging!: Lodging;
+
+  @IsInt({
+    message: OfferApiError.RoomsCountIsNotInteger
+  })
+  @Min(RoomsRange.Min, {
+    message: OfferApiError.RoomsCountIsInvalid
+  })
+  @Max(RoomsRange.Max, {
+    message: OfferApiError.RoomsCountIsInvalid
+  })
   public roomsCount!: number;
+
+  @IsInt({
+    message: OfferApiError.GuestCountIsNotInteger
+  })
+  @Min(GuestsRange.Min, {
+    message: OfferApiError.GuestCountIsInvalid
+  })
+  @Max(GuestsRange.Max, {
+    message: OfferApiError.GuestCountIsInvalid
+  })
   public guestsCount!: number;
+
+  @IsInt({
+    message: OfferApiError.PriceIsNotInteger
+  })
+  @Min(PriceRange.Min, {
+    message: OfferApiError.PriceIsInvalid
+  })
+  @Max(PriceRange.Max, {
+    message: OfferApiError.PriceIsInvalid
+  })
   public price!: number;
-  public features!: string[];
+
+  @IsArray({
+    message: OfferApiError.FeaturesIsNotArray
+  })
+  @IsEnum(Feature,{
+    each: true,
+    message: OfferApiError.FeatureIsInvalid
+  })
+  public features!: Feature[];
+
+  @IsMongoId({
+    message: OfferApiError.HostIdIsInvalid
+  })
   public hostId!: string;
+
+  @IsDefined()
+  @IsNotEmptyObject()
+  @IsObject()
+  @ValidateNested({
+    message: OfferApiError.LocationIsInvalid
+  })
+  @Type(() => LocationDto)
   public location!: Location;
 }

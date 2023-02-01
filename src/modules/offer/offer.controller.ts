@@ -13,8 +13,8 @@ import CreateOfferDto from './dto/create-offer.dto.js';
 import UpdateOfferDto from './dto/update-offer.dto.js';
 import { OfferServiceInterface } from './offer-service.interface.js';
 import OfferQuery from './query/offer.query.js';
-import OfferFullResponse from './response/offer-full.response.js';
-import OfferShortResponse from './response/offer-short.response.js';
+import OfferListResponse from './response/offer-list.response.js';
+import OfferSingleResponse from './response/offer-single.response.js';
 
 type ParamsGetOffer = {
   offerId: string;
@@ -75,7 +75,7 @@ export default class OfferController extends Controller {
       );
 
     }
-    this.ok(res, fillDTO(OfferFullResponse, offer));
+    this.ok(res, fillDTO(OfferListResponse, offer));
   }
 
   public async getOffers(
@@ -86,7 +86,7 @@ export default class OfferController extends Controller {
     if (!offersList) {
       throw new Error('Failed to get offers');
     }
-    return this.ok(res, fillDTO(OfferShortResponse, offersList));
+    return this.ok(res, fillDTO(OfferSingleResponse, offersList));
   }
 
   public async create(
@@ -95,7 +95,7 @@ export default class OfferController extends Controller {
   ): Promise<void> {
     const result = await this.offerService.create(body);
     const offer = await this.offerService.findById(result.id);
-    this.created(res, fillDTO(OfferFullResponse, offer));
+    this.created(res, fillDTO(OfferListResponse, offer));
   }
 
   public async delete(
@@ -131,6 +131,6 @@ export default class OfferController extends Controller {
       );
     }
 
-    this.ok(res, fillDTO(OfferFullResponse, updatedOffer));
+    this.ok(res, fillDTO(OfferListResponse, updatedOffer));
   }
 }
