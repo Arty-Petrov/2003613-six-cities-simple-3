@@ -1,5 +1,5 @@
-import { Expose } from 'class-transformer';
-import { User } from '../../../types/user.type.js';
+import { Expose, Transform } from 'class-transformer';
+import UserResponse from '../../user/response/user.response.js';
 
 export default class CommentResponse {
   @Expose()
@@ -15,5 +15,6 @@ export default class CommentResponse {
   public postDate!: string;
 
   @Expose({ name: 'userId'})
-  public host!: User;
+  @Transform(() => UserResponse)
+  public user!: UserResponse;
 }

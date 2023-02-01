@@ -105,13 +105,13 @@ export default class UpdateOfferDto {
   public guestsCount?: number;
 
   @IsInt({
-    message: OfferApiError.PriceIsNotInteger
+    message: OfferApiError.RatingIsNotInteger
   })
   @Min(PriceRange.Min, {
-    message: OfferApiError.PriceIsInvalid
+    message: OfferApiError.RatingIsInvalid
   })
   @Max(PriceRange.Max, {
-    message: OfferApiError.PriceIsInvalid
+    message: OfferApiError.RatingIsInvalid
   })
   public price?: number;
 
