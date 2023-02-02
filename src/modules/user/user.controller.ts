@@ -1,3 +1,4 @@
+import { instanceToPlain } from 'class-transformer';
 import { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import { inject, injectable } from 'inversify';
@@ -5,21 +6,26 @@ import { ConfigInterface } from '../../common/config/config.interface.js';
 import { Controller } from '../../common/controller/controller.js';
 import HttpError from '../../common/errors/http-error.js';
 import { LoggerInterface } from '../../common/logger/logger.interface.js';
+import { UploadFileMiddleware } from '../../common/middlewares/upload-file.middleware.js';
 import { ValidateDtoMiddleware } from '../../common/middlewares/validate-dto.middleware.js';
+import { ValidateObjectIdMiddleware } from '../../common/middlewares/validate-objectId.middleware.js';
 import { Component } from '../../types/component.types.js';
 import { HttpMethod } from '../../types/http-method.enum.js';
-import { fillDTO } from '../../utils/common.js';
+import { UploadField } from '../../types/upload-field.const.js';
+import { fillDTO, multerFilesToDTO } from '../../utils/common.js';
 import CreateUserDto from './dto/create-user.dto.js';
 import LoginUserDto from './dto/login-user.dto.js';
+import UploadUserAvatarResponse from './response/upload-user-avatar.response.js';
 import UserResponse from './response/user.response.js';
 import { UserServiceInterface } from './user-service.interface.js';
+import { USER_FILES_UPLOAD_FIELDS } from './user.constant.js';
 
 @injectable()
 export default class UserController extends Controller {
   constructor(
     @inject(Component.LoggerInterface) logger: LoggerInterface,
-    @inject(Component.UserServiceInterface) private readonly userService: UserServiceInterface,
     @inject(Component.ConfigInterface) private readonly configService: ConfigInterface,
+    @inject(Component.UserServiceInterface) private readonly userService: UserServiceInterface,
   ) {
     super(logger);
     this.logger.info('Register routes for UserController…');
@@ -38,6 +44,15 @@ export default class UserController extends Controller {
       handler: this.login,
       middlewares: [
         new ValidateDtoMiddleware(LoginUserDto)
+      ]
+    });
+    this.addRoute({
+      path: '/:userId/avatar',
+      method: HttpMethod.Post,
+      handler: this.uploadAvatar,
+      middlewares: [
+        new ValidateObjectIdMiddleware('userId'),
+        new UploadFileMiddleware(this.configService.get('UPLOAD_DIRECTORY'), USER_FILES_UPLOAD_FIELDS),
       ]
     });
     this.addRoute({path: '/login', method: HttpMethod.Get, handler: this.check});
@@ -65,6 +80,7 @@ export default class UserController extends Controller {
     );
   }
 
+
   public async login(
     {body}: Request<Record<string, unknown>, Record<string, unknown>, LoginUserDto>,
     _res: Response,
@@ -84,6 +100,15 @@ export default class UserController extends Controller {
       'Not implemented',
       'UserController',
     );
+  }
+
+  public async uploadAvatar(req: Request, res: Response) {
+    const {files, params: {userId}} = req;
+
+    const fileName = multerFilesToDTO(instanceToPlain(files));
+    const avatarUrl = {avatarUrl: fileName[UploadField.Avatar][0]};
+    await this.userService.updateById(userId, avatarUrl);
+    this.created(res, fillDTO(UploadUserAvatarResponse, avatarUrl));
   }
 
   public async check(

@@ -1,4 +1,7 @@
-export const USER_IMAGE_TYPE_REGEXP = /[\\w/-]+.(jpg|jpeg|png)/;
+export const USER_FILES_UPLOAD_FIELDS = [
+  { name: 'avatar', maxCount: 1 },
+];
+
 export const UserDefault = {
   AvatarFileName: 'default-avatar.jpg',
 } as const;

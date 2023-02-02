@@ -60,8 +60,8 @@ export default class UserService implements UserServiceInterface {
     return null;
   }
 
-  public async exists(userId: string): Promise<boolean> {
+  public async exists(documentId: string): Promise<boolean> {
     return (await this.userModel
-      .exists({_id: userId})) !== null;
+      .exists({_id: documentId})) !== null;
   }
 }
