@@ -9,6 +9,8 @@ import { DocumentExistsMiddleware } from '../../common/middlewares/document-exis
 import { UploadFileMiddleware } from '../../common/middlewares/upload-file.middleware.js';
 import { ValidateDtoMiddleware } from '../../common/middlewares/validate-dto.middleware.js';
 import { ValidateObjectIdMiddleware } from '../../common/middlewares/validate-objectId.middleware.js';
+import { ValidateUploadsCountMiddleware } from '../../common/middlewares/validate-uploads-count.middleware.js';
+import { OfferPhotosCount } from '../../const/const.index.js';
 import { Component } from '../../types/component.types.js';
 import { HttpMethod } from '../../types/http-method.enum.js';
 import { UploadField } from '../../types/upload-field.const.js';
@@ -88,6 +90,7 @@ export default class OfferController extends Controller {
         new ValidateObjectIdMiddleware('offerId'),
         new DocumentExistsMiddleware(this.offerService, 'Offer', 'offerId'),
         new UploadFileMiddleware(this.configService.get('UPLOAD_DIRECTORY'), OFFER_FILES_UPLOAD_FIELDS),
+        new ValidateUploadsCountMiddleware(UploadField.Photos, OfferPhotosCount.Strict),
       ]
     });
     this.addRoute({
@@ -150,7 +153,7 @@ export default class OfferController extends Controller {
     {files, params: {offerId}}: Request<core.ParamsDictionary | ParamsGetOffer, Record<string, unknown>>,
     res: Response
   ): Promise<void> {
-    const fileName = multerFilesToDTO(instanceToPlain(files));
+    const fileName = multerFilesToDTO(instanceToPlain(files), 'filename');
     const preview = {preview: fileName[UploadField.Preview][0]};
     const photos = {photos: fileName[UploadField.Photos]};
 

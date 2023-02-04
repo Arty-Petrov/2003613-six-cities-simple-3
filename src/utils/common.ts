@@ -72,11 +72,11 @@ export const createErrorObject = (message: string) => ({
 export const fillDTO = <T, V>(someDto: ClassConstructor<T>, plainObject: V) =>
   plainToInstance(someDto, plainObject, {excludeExtraneousValues: true});
 
-export const multerFilesToDTO = (files: Record<string, Array<Record<string, string>>>): Record<string, string[]> => {
+export const multerFilesToDTO = (files: Record<string, Array<Record<string, string>>>, multerFileField: string): Record<string, string[]> => {
   let dto: {[index: string]: string[]} = {};
   const fieldKeys = Object.keys(files);//?
   for (const key of fieldKeys) {
-    const values = files[key].map((item) => item['filename']);
+    const values = files[key].map((item) => item[multerFileField]);
     dto = {...dto, [key]: [...values]};//?
   }
 
