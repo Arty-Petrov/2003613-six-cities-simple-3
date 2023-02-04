@@ -105,7 +105,7 @@ export default class UserController extends Controller {
   public async uploadAvatar(req: Request, res: Response) {
     const {files, params: {userId}} = req;
 
-    const fileName = multerFilesToDTO(instanceToPlain(files));
+    const fileName = multerFilesToDTO(instanceToPlain(files), 'filename');
     const avatarUrl = {avatarUrl: fileName[UploadField.Avatar][0]};
     await this.userService.updateById(userId, avatarUrl);
     this.created(res, fillDTO(UploadUserAvatarResponse, avatarUrl));
