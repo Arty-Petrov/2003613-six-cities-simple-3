@@ -112,8 +112,6 @@ export default class ImportCommand implements CliCommandInterface {
       userId: userId,
       offerId: offerId,
     });
-    const offerCounters = await this.commentService.getOfferCounters(offerId);
-    await this.offerService.updateCommentData(offerCounters);
   }
 
   private async onLineUsers(line: string, resolve: () => void) {

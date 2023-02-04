@@ -44,12 +44,7 @@ export default class CommentController extends Controller {
         'CommentController'
       );
     }
-
     const comment = await this.commentService.create(body);
-    const offerRatingUpdate = await this.commentService.getOfferCounters(body.offerId);
-
-    await this.logger.info(`${JSON.stringify(offerRatingUpdate)}`);
-    await this.offerService.updateCommentData(offerRatingUpdate);
     this.created(res, fillDTO(CommentResponse, comment));
   }
 }
