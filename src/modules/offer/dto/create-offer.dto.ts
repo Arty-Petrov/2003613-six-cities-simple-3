@@ -1,7 +1,5 @@
 import { Type } from 'class-transformer';
 import {
-  ArrayMaxSize,
-  ArrayNotEmpty,
   IsArray,
   IsBoolean,
   IsDateString,
@@ -12,7 +10,6 @@ import {
   IsNotEmptyObject,
   IsObject,
   Length,
-  Matches,
   Max,
   Min,
   ValidateNested,
@@ -24,9 +21,7 @@ import { Lodging } from '../../../types/lodging.enum.js';
 import {
   DescriptionLength,
   GuestsRange,
-  OFFER_IMAGE_TYPE_REGEXP,
   OfferApiError,
-  OfferDefault,
   PriceRange,
   RoomsRange,
   TitleLength,
@@ -53,25 +48,6 @@ export default class CreateOfferDto {
     message: OfferApiError.CityIsInvalid
   })
   public city!: City;
-
-  @Matches(OFFER_IMAGE_TYPE_REGEXP, {
-    message: OfferApiError.PreviewIsWrongFormat
-  })
-  public preview!: string;
-
-  @IsArray({
-    message:OfferApiError.PhotosIsNotArray
-  })
-  @ArrayNotEmpty({
-    message: OfferApiError.PhotosArrayIsEmpty
-  })
-  @ArrayMaxSize(OfferDefault.PhotosCount, {
-    message: OfferApiError.PhotosArrayLengthIsWrong
-  })
-  @Matches(OFFER_IMAGE_TYPE_REGEXP, {
-    each: true,
-    message: OfferApiError.PhotoIsWrongFormat })
-  public photos!: string[];
 
   @IsBoolean()
   public isPremium!: boolean;

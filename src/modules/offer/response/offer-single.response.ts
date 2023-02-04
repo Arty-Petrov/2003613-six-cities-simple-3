@@ -1,12 +1,17 @@
-import { Expose, Transform } from 'class-transformer';
+import { Expose, Transform, Type } from 'class-transformer';
+import { Feature } from '../../../types/feature.enum.js';
 import { Lodging } from '../../../types/lodging.enum.js';
+import UserResponse from '../../user/response/user.response.js';
 
 export default class OfferSingleResponse {
-  @Expose({name: '_id'})
+  @Expose()
   public id!: string;
 
   @Expose()
   public title!: string;
+
+  @Expose()
+  public description!: string;
 
   @Expose()
   public postDate!: string;
@@ -29,14 +34,15 @@ export default class OfferSingleResponse {
   public isPremium!: boolean;
 
   @Expose()
-  public rating!: number;
-
-  @Expose()
   public lodging!: Lodging;
 
   @Expose()
   public price!: number;
 
   @Expose()
-  public commentsCount!: number;
+  public features!: Feature[];
+
+  @Expose({ name: 'hostId'})
+  @Type(() => UserResponse)
+  public hostId!: UserResponse;
 }

@@ -1,18 +1,15 @@
 import { Type } from 'class-transformer';
 import {
-  ArrayMaxSize,
-  ArrayNotEmpty,
   IsArray,
   IsBoolean,
   IsDateString,
   IsDefined,
   IsEnum,
   IsInt,
-  IsMongoId,
   IsNotEmptyObject,
   IsObject,
+  IsOptional,
   Length,
-  Matches,
   Max,
   Min,
   ValidateNested,
@@ -24,9 +21,7 @@ import { Lodging } from '../../../types/lodging.enum.js';
 import {
   DescriptionLength,
   GuestsRange,
-  OFFER_IMAGE_TYPE_REGEXP,
   OfferApiError,
-  OfferDefault,
   PriceRange,
   RoomsRange,
   TitleLength,
@@ -34,54 +29,48 @@ import {
 import LocationDto from './location.dto.js';
 
 export default class UpdateOfferDto {
+  @IsOptional()
   @Length(TitleLength.Min, TitleLength.Max, {
     message: OfferApiError.TitleIsInvalid
   })
   public title?: string;
 
+  @IsOptional()
   @Length(DescriptionLength.Min, DescriptionLength.Max, {
     message: OfferApiError.DescriptionIsInvalid
   })
-  public description!: string;
+  public description?: string;
 
+  @IsOptional()
   @IsDateString({}, {
     message: OfferApiError.PostDateIsInvalid
   })
   public postDate?: Date;
 
+  @IsOptional()
   @IsEnum(City, {
     message: OfferApiError.CityIsInvalid
   })
   public city?: City;
 
-  @Matches(OFFER_IMAGE_TYPE_REGEXP, {
-    message: OfferApiError.PreviewIsWrongFormat
-  })
+  @IsOptional()
   public preview?: string;
 
-  @IsArray({
-    message:OfferApiError.PhotosIsNotArray
-  })
-  @ArrayNotEmpty({
-    message: OfferApiError.PhotosArrayIsEmpty
-  })
-  @ArrayMaxSize(OfferDefault.PhotosCount, {
-    message: OfferApiError.PhotosArrayLengthIsWrong
-  })
-  @Matches(OFFER_IMAGE_TYPE_REGEXP, {
-    each: true,
-    message: OfferApiError.PhotoIsWrongFormat })
+  @IsOptional()
   public photos?: string[];
 
+  @IsOptional()
   @IsBoolean()
   public isPremium?: boolean;
 
+  @IsOptional()
   @IsEnum(Lodging, {
     each: true,
     message: OfferApiError.LodgingIsInvalid
   })
   public lodging?: Lodging;
 
+  @IsOptional()
   @IsInt({
     message: OfferApiError.RoomsCountIsNotInteger
   })
@@ -93,6 +82,7 @@ export default class UpdateOfferDto {
   })
   public roomsCount?: number;
 
+  @IsOptional()
   @IsInt({
     message: OfferApiError.GuestCountIsNotInteger
   })
@@ -104,6 +94,7 @@ export default class UpdateOfferDto {
   })
   public guestsCount?: number;
 
+  @IsOptional()
   @IsInt({
     message: OfferApiError.RatingIsNotInteger
   })
@@ -115,6 +106,7 @@ export default class UpdateOfferDto {
   })
   public price?: number;
 
+  @IsOptional()
   @IsArray({
     message: OfferApiError.FeaturesIsNotArray
   })
@@ -124,11 +116,7 @@ export default class UpdateOfferDto {
   })
   public features?: Feature[];
 
-  @IsMongoId({
-    message: OfferApiError.HostIdIsInvalid
-  })
-  public hostId?: string;
-
+  @IsOptional()
   @IsDefined()
   @IsNotEmptyObject()
   @IsObject()

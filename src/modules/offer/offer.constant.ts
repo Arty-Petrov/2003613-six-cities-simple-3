@@ -2,7 +2,11 @@ import { City } from '../../types/city.enum.js';
 import { Feature } from '../../types/feature.enum.js';
 import { Lodging } from '../../types/lodging.enum.js';
 
-export const OFFER_IMAGE_TYPE_REGEXP = /[\\w/-]+.(jpg|jpeg|png)/;
+export const OFFER_FILES_UPLOAD_FIELDS = [
+  { name: 'preview', maxCount: 1 },
+  { name: 'photos', maxCount: 6 },
+];
+
 export const OfferDefault = {
   CommentsCount: 0,
   PhotosCount: 6,

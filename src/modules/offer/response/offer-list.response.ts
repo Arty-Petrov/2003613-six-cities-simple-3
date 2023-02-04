@@ -2,11 +2,12 @@ import { Expose, Transform } from 'class-transformer';
 import { City } from '../../../types/city.enum.js';
 
 export default class OfferListResponse {
-  @Expose({name: '_id'})
+  @Expose()
   public id!: string;
 
   @Expose()
   public title!: string;
+
   @Expose()
   public postDate!: string;
 

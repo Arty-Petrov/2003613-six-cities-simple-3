@@ -7,20 +7,13 @@ Content-Type: application/json
   "description": "У нас тут все ништяк. Ларек за углом. Шава 24 часа. Приезжайте! Интернетов нет!",
   "postDate": "2021-02-01T11:56:37.573Z",
   "city": "Paris",
-  "preview": "felix-fuchs-PXAcac16eJQ.jpg",
-  "photos": [
-    "brandon-hoogenboom-SNxQGWxZQi0.jpg",
-    "cameron-venti-R64qgQ6rr_o.jpg",
-    "claire-rendall-b6kAwr1i0Iw.jpg",
-    "ducminh-nguyen-hG3H6N6VwCY.jpg"
-    ],
   "isPremium": true,
   "lodging": "apartment",
   "roomsCount": 2,
   "guestsCount": 6,
   "price": 75161,
   "features": ["Washer","Towels","Fridge"],
-  "hostId": "63597a7e95a2767ad5fdc1ac",
+  "hostId": "63dbe04c9d4c8f2da57f6ffe",
   "location": {
     "latitude": 40.88414,
     "longitude": 142.793509
@@ -51,7 +44,47 @@ Content-Type: application/json
   "price": 1100
 }
 ###
+#@name UPLOAD OFFER IMAGES
+POST {{baseUrl}}/offers/{{offerId}}/images  HTTP/1.1
+Content-Type: multipart/form-data; boundary=WebKitFormBoundary
 
+--WebKitFormBoundary
+Content-Disposition: form-data; name="preview"; filename="room-small.jpg"
+Content-Type: image/jpeg
+
+< ../markup/img/room-small.jpg
+--WebKitFormBoundary--
+Content-Disposition: form-data; name="photos"; filename="room.jpg"
+Content-Type: image/jpeg
+
+< ../markup/img/room.jpg
+--WebKitFormBoundary--
+Content-Disposition: form-data; name="photos"; filename="apartment-01.jpg"
+Content-Type: image/jpeg
+
+< ../markup/img/apartment-01.jpg
+--WebKitFormBoundary--
+Content-Disposition: form-data; name="photos"; filename="apartment-02.jpg"
+Content-Type: image/jpeg
+
+< ../markup/img/apartment-02.jpg
+--WebKitFormBoundary--
+Content-Disposition: form-data; name="photos"; filename="apartment-03.jpg"
+Content-Type: image/jpeg
+
+< ../markup/img/apartment-03.jpg
+--WebKitFormBoundary--
+Content-Disposition: form-data; name="photos"; filename="apartment-02.jpg"
+Content-Type: image/jpeg
+
+< ../markup/img/apartment-02.jpg
+--WebKitFormBoundary--
+Content-Disposition: form-data; name="photos"; filename="apartment-03.jpg"
+Content-Type: image/jpeg
+
+< ../markup/img/apartment-03.jpg
+--WebKitFormBoundary--
+###
 #@name DELETE OFFER
 DELETE {{baseUrl}}/offers/{{offerId}} HTTP/1.1
 ###
