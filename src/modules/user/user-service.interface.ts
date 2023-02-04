@@ -5,7 +5,7 @@ import UpdateUserDto from './dto/update-user.dto.js';
 import { UserEntity } from './user.entity.js';
 
 export interface UserServiceInterface {
-  exists(email: string):Promise<boolean>
+  exists(documentId: string):Promise<boolean>
   create(dto: CreateUserDto, salt: string): Promise<DocumentType<UserEntity>>;
   findOrCreate(dto: CreateUserDto, salt: string): Promise<DocumentType<UserEntity>>;
   updateById(userId: string, dto: UpdateUserDto): Promise<DocumentType<UserEntity> | null>

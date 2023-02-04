@@ -1,7 +1,7 @@
-import { Expose } from 'class-transformer';
-import { Lodging } from '../../../types/lodging.enum.js';
+import { Expose, Transform } from 'class-transformer';
+import { City } from '../../../types/city.enum.js';
 
-export default class OfferShortResponse {
+export default class OfferListResponse {
   @Expose()
   public id!: string;
 
@@ -12,9 +12,10 @@ export default class OfferShortResponse {
   public postDate!: string;
 
   @Expose()
-  public city!: string;
+  public city!: City;
 
   @Expose()
+  @Transform(({ value }) => `http://localhost:4000/upload/preview/${value}`)
   public preview!: string;
 
   @Expose()
@@ -24,7 +25,7 @@ export default class OfferShortResponse {
   public rating!: number;
 
   @Expose()
-  public lodging!: Lodging;
+  public lodging!: string;
 
   @Expose()
   public price!: number;

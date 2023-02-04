@@ -25,9 +25,9 @@ export default class OfferService implements OfferServiceInterface {
     return result;
   }
 
-  public async exists(offerId: string): Promise<boolean> {
+  public async exists(documentId: string): Promise<boolean> {
     return (await this.offerModel
-      .exists({_id: offerId})) !== null;
+      .exists({_id: documentId})) !== null;
   }
 
   public async find(query: OfferQuery): Promise<DocumentType<OfferEntity>[]> {
@@ -67,7 +67,7 @@ export default class OfferService implements OfferServiceInterface {
   public async updateById(offerId: string, dto: UpdateOfferDto): Promise<DocumentType<OfferEntity> | null> {
     return this.offerModel
       .findByIdAndUpdate(offerId, dto, { new: true })
-      .populate(['hostId', 'features'])
+      .populate(['hostId'])
       .exec();
   }
 
