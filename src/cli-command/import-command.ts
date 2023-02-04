@@ -5,7 +5,7 @@ import DatabaseService from '../common/database-client/database.service.js';
 import TSVFileReader from '../common/file-reader/tsv-file-reader.js';
 import ConsoleLoggerService from '../common/logger/console-logger.service.js';
 import { LoggerInterface } from '../common/logger/logger.interface.js';
-import { MockPaths } from '../const/const.index.js';
+import MockPaths from '../const/mock-paths.const.js';
 import { CommentServiceInterface } from '../modules/comment/comment-service.interface.js';
 import { CommentModel } from '../modules/comment/comment.entity.js';
 import CommentService from '../modules/comment/comment.service.js';
@@ -15,8 +15,8 @@ import OfferService from '../modules/offer/offer.service.js';
 import { UserServiceInterface } from '../modules/user/user-service.interface.js';
 import { UserModel } from '../modules/user/user.entity.js';
 import UserService from '../modules/user/user.service.js';
+import { Comment } from '../types/comment.type.js';
 import { Offer } from '../types/offer.type.js';
-import { Comment } from '../types/type.index.js';
 import { User } from '../types/user.type.js';
 import { createComment, createOffer, createUser, getErrorMessage } from '../utils/common.js';
 import { getURI } from '../utils/db.js';
@@ -112,8 +112,6 @@ export default class ImportCommand implements CliCommandInterface {
       userId: userId,
       offerId: offerId,
     });
-    const offerCounters = await this.commentService.getOfferCounters(offerId);
-    await this.offerService.updateCommentData(offerCounters);
   }
 
   private async onLineUsers(line: string, resolve: () => void) {

@@ -23,7 +23,7 @@ Content-Type: application/json
 ###
 
 #@name GET OFFERS BY QUERY
-GET {{baseUrl}}/offers?count=5&city=Paris&premium=true HTTP/1.1
+GET {{baseUrl}}/offers?count=60&city=Brussels&premium=true HTTP/1.1
 ###
 
 #@name GET OFFER BY ID

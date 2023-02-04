@@ -1,0 +1,863 @@
+GET http://localhost:4000/offers?count=60&city=Brussels&premium=true
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-04T220400.200.json
+
+###
+
+GET http://localhost:4000/offers?count=60&city=Brussels&premium=false
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-04T220340.200.json
+
+###
+
+GET http://localhost:4000/offers?count=60&city=Brussels&premium=false
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-04T220249.200.json
+
+###
+
+GET http://localhost:4000/offers?count=5&city=Brussels&premium=false
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-04T220138.200.json
+
+###
+
+GET http://localhost:4000/offers?count=5&city=Brussels&premium=false
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-04T214850.200.json
+
+###
+
+GET http://localhost:4000/offers?count=5&city=Brussels&premium=true
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-04T214838.200.json
+
+###
+
+GET http://localhost:4000/offers?count=5&city=Brussels&premium=true
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-04T214219.200.json
+
+###
+
+GET http://localhost:4000/offers?count=5&city=Brussels&premium=true
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-04T214056.200.json
+
+###
+
+GET http://localhost:4000/offers?count=5&city=Brussels&premium=true
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-04T214046.200.json
+
+###
+
+GET http://localhost:4000/offers?count=5&city=Brussels
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-04T214004.200.json
+
+###
+
+GET http://localhost:4000/offers?count=5
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-04T213946.200.json
+
+###
+
+GET http://localhost:4000/offers?count=5&premium=true
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-04T213919.200.json
+
+###
+
+GET http://localhost:4000/offers?count=5&city=Brussels&premium=true
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-04T213905.200.json
+
+###
+
+GET http://localhost:4000/offers?count=5&city=Brussels&premium=true
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-04T213844.200.json
+
+###
+
+GET http://localhost:4000/offers?count=5&city=Brussels&premium=true
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-04T213754.200.json
+
+###
+
+GET http://localhost:4000/offers?count=5
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-04T213555.200.json
+
+###
+
+GET http://localhost:4000/offers?count=5&premium=true
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-04T213537.200.json
+
+###
+
+GET http://localhost:4000/offers?count=5&city=Brussels&premium=true
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-04T213522.200.json
+
+###
+
+GET http://localhost:4000/offers?count=5&city=Brussels&premium=true
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-04T213423.200.json
+
+###
+
+GET http://localhost:4000/offers?count=5&city=Brussels&premium=true
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-04T213323.200.json
+
+###
+
+GET http://localhost:4000/offers?count=5&premium=true
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-04T213139.200.json
+
+###
+
+GET http://localhost:4000/offers?count=2&premium=true
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-04T213111.200.json
+
+###
+
+GET http://localhost:4000/offers?count=2&premium=true
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-04T213058.200.json
+
+###
+
+GET http://localhost:4000/offers?count=2&premium=true
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-04T213050.200.json
+
+###
+
+GET http://localhost:4000/offers?count=2&city=Brussels
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-04T213026.200.json
+
+###
+
+GET http://localhost:4000/offers?count=2&city=Brussels&premium=true
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-04T212952.200.json
+
+###
+
+GET http://localhost:4000/offers?count=2&city=Brussels&premium=true
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-04T212710.200.json
+
+###
+
+GET http://localhost:4000/offers?count=5&city=Brussels&premium=true
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-04T212527.200.json
+
+###
+
+GET http://localhost:4000/offers?count=5&premium=true
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-04T212428.200.json
+
+###
+
+GET http://localhost:4000/offers?count=5&city=Paris&premium=true
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-04T212328.200.json
+
+###
+
+GET http://localhost:4000/offers?count=5&city=Paris&premium=true
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-04T212142.200.json
+
+###
+
+GET http://localhost:4000/offers?count=5&city=Paris&premium=true
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-04T212025.200.json
+
+###
+
+GET http://localhost:4000/offers?count=5&city=Paris&premium=true
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-04T211958.200.json
+
+###
+
+GET http://localhost:4000/offers?count=5&city=Paris&premium=true
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-04T211933.200.json
+
+###
+
+GET http://localhost:4000/offers?count=5&city=Paris&premium=true
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-04T211625.200.json
+
+###
+
+GET http://localhost:4000/offers?count=5&city=Paris&premium=true
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-04T211511.200.json
+
+###
+
+GET http://localhost:4000/offers
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-04T211243.200.json
+
+###
+
+GET http://localhost:4000/offers?count=5&city=Paris&premium=true
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-04T210835.200.json
+
+###
+
+POST http://localhost:4000/offers/63de27ab0c808e518b5317cf/images
+Content-Type: multipart/form-data; boundary=WebKitFormBoundary
+Content-Length: 170467
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebKitFormBoundary
+Content-Disposition: form-data; name="preview"; filename="room-small.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/room-small.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="room.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/room.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-01.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-01.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-02.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-02.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-03.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-03.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-02.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-02.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-03.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-03.jpg
+--WebKitFormBoundary--
+
+<> 2023-02-04T154459.201.json
+
+###
+
+POST http://localhost:4000/offers/63de27ab0c808e518b5317cf/images
+Content-Type: multipart/form-data; boundary=WebKitFormBoundary
+Content-Length: 149767
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebKitFormBoundary
+Content-Disposition: form-data; name="preview"; filename="room-small.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/room-small.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="room.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/room.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-01.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-01.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-02.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-02.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-03.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-03.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-02.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-02.jpg
+--WebKitFormBoundary--
+
+<> 2023-02-04T154435.500.html
+
+###
+
+POST http://localhost:4000/offers/63de27ab0c808e518b5317cf/images
+Content-Type: multipart/form-data; boundary=WebKitFormBoundary
+Content-Length: 149767
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebKitFormBoundary
+Content-Disposition: form-data; name="preview"; filename="room-small.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/room-small.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="room.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/room.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-01.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-01.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-02.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-02.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-03.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-03.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-02.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-02.jpg
+--WebKitFormBoundary--
+
+<> 2023-02-04T154425.500.html
+
+###
+
+POST http://localhost:4000/offers/63de27ab0c808e518b5317cf/images
+Content-Type: multipart/form-data; boundary=WebKitFormBoundary
+Content-Length: 149767
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebKitFormBoundary
+Content-Disposition: form-data; name="preview"; filename="room-small.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/room-small.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="room.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/room.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-01.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-01.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-02.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-02.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-03.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-03.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-02.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-02.jpg
+--WebKitFormBoundary--
+
+<> 2023-02-04T154350.500.html
+
+###
+
+POST http://localhost:4000/offers/63de27ab0c808e518b5317cf/images
+Content-Type: multipart/form-data; boundary=WebKitFormBoundary
+Content-Length: 149767
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebKitFormBoundary
+Content-Disposition: form-data; name="preview"; filename="room-small.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/room-small.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="room.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/room.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-01.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-01.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-02.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-02.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-03.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-03.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-02.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-02.jpg
+--WebKitFormBoundary--
+
+<> 2023-02-04T154248.500.html
+
+###
+
+POST http://localhost:4000/offers/63de27ab0c808e518b5317cf/images
+Content-Type: multipart/form-data; boundary=WebKitFormBoundary
+Content-Length: 149767
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebKitFormBoundary
+Content-Disposition: form-data; name="preview"; filename="room-small.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/room-small.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="room.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/room.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-01.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-01.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-02.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-02.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-03.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-03.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-02.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-02.jpg
+--WebKitFormBoundary--
+
+<> 2023-02-04T153643.500.html
+
+###
+
+POST http://localhost:4000/offers/63de27ab0c808e518b5317cf/images
+Content-Type: multipart/form-data; boundary=WebKitFormBoundary
+Content-Length: 149767
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebKitFormBoundary
+Content-Disposition: form-data; name="preview"; filename="room-small.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/room-small.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="room.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/room.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-01.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-01.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-02.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-02.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-03.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-03.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-02.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-02.jpg
+--WebKitFormBoundary--
+
+<> 2023-02-04T153128.500.html
+
+###
+
+POST http://localhost:4000/offers/63de27ab0c808e518b5317cf/images
+Content-Type: multipart/form-data; boundary=WebKitFormBoundary
+Content-Length: 149767
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebKitFormBoundary
+Content-Disposition: form-data; name="preview"; filename="room-small.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/room-small.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="room.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/room.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-01.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-01.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-02.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-02.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-03.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-03.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-02.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-02.jpg
+--WebKitFormBoundary--
+
+<> 2023-02-04T151602.500.html
+
+###
+
+POST http://localhost:4000/offers/63de27ab0c808e518b5317cf/images
+Content-Type: multipart/form-data; boundary=WebKitFormBoundary
+Content-Length: 149767
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebKitFormBoundary
+Content-Disposition: form-data; name="preview"; filename="room-small.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/room-small.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="room.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/room.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-01.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-01.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-02.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-02.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-03.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-03.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-02.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-02.jpg
+--WebKitFormBoundary--
+
+<> 2023-02-04T151444.500.html
+
+###
+
+POST http://localhost:4000/offers/63de27ab0c808e518b5317cf/images
+Content-Type: multipart/form-data; boundary=WebKitFormBoundary
+Content-Length: 149767
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebKitFormBoundary
+Content-Disposition: form-data; name="preview"; filename="room-small.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/room-small.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="room.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/room.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-01.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-01.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-02.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-02.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-03.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-03.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-02.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-02.jpg
+--WebKitFormBoundary--
+
+<> 2023-02-04T151342.500.html
+
+###
+
+POST http://localhost:4000/offers/63de27ab0c808e518b5317cf/images
+Content-Type: multipart/form-data; boundary=WebKitFormBoundary
+Content-Length: 149767
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebKitFormBoundary
+Content-Disposition: form-data; name="preview"; filename="room-small.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/room-small.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="room.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/room.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-01.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-01.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-02.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-02.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-03.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-03.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-02.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-02.jpg
+--WebKitFormBoundary--
+
+<> 2023-02-04T151256.500.html
+
+###
+
+POST http://localhost:4000/offers/63de27ab0c808e518b5317cf/images
+Content-Type: multipart/form-data; boundary=WebKitFormBoundary
+Content-Length: 149767
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebKitFormBoundary
+Content-Disposition: form-data; name="preview"; filename="room-small.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/room-small.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="room.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/room.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-01.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-01.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-02.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-02.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-03.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-03.jpg
+--WebKitFormBoundary
+Content-Disposition: form-data; name="photos"; filename="apartment-02.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/apartment-02.jpg
+--WebKitFormBoundary--
+
+<> 2023-02-04T151203.500.html
+
+###
+

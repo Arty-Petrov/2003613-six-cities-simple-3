@@ -4,7 +4,6 @@ import { LoggerInterface } from '../../common/logger/logger.interface.js';
 import { Component } from '../../types/component.types.js';
 import { SortOrder } from '../../types/sort-order.enum.js';
 import CreateOfferDto from './dto/create-offer.dto.js';
-import UpdateCommentDataDto from './dto/update-comment-data.dto.js';
 import UpdateOfferDto from './dto/update-offer.dto.js';
 import { OfferServiceInterface } from './offer-service.interface.js';
 import { OfferDefault } from './offer.constant.js';
@@ -33,24 +32,42 @@ export default class OfferService implements OfferServiceInterface {
   public async find(query: OfferQuery): Promise<DocumentType<OfferEntity>[]> {
     const {city, premium, limit, sort} = query;
     let matchParams: { [key: string]: string | number | boolean } = {};
-    matchParams = (city) ? {...matchParams, city: city} : {...matchParams};
-    matchParams = (premium) ? {...matchParams, isPremium: premium} : {...matchParams};
-
+    matchParams = (city !== undefined)
+      ? {...matchParams, city: city}
+      : {...matchParams};
+    matchParams = (premium !== undefined)
+      ? {...matchParams, isPremium: eval(premium as unknown as string)}
+      : {...matchParams};
+    console.log(matchParams);
     const sortDirection = sort || SortOrder.Down;
     const offersLimit = limit || OfferDefault.ListCount;
 
     const offers = await this.offerModel
       .aggregate([
         {
-          '$match': { matchParams },
+          '$match':  matchParams ,
         },
         {
-          '$addFields': {
-            'id': {'$toString': '$_id'},
-          }
+          $lookup: {
+            from: 'comments',
+            localField: '_id',
+            foreignField: 'offerId',
+            pipeline: [
+              { $project: { 'rating': 1}}
+            ],
+            as: 'ratingData'
+          },
         },
-        {'$sort': {'postDate': sortDirection}},
-        {'$limit': offersLimit }
+        { $addFields:
+              {
+                'id': {$toString: '$_id'},
+                'rating': {$round: [{ $avg: '$ratingData.rating'}, 1]},
+                'commentsCount': { $size: '$ratingData'}
+              },
+        },
+        { $unset: ['offers', '_id'] },
+        { $sort: {'postDate': sortDirection}},
+        { $limit: offersLimit },
       ]
       );
     await this.offerModel.populate(offers, {path: 'hostId', });
@@ -77,23 +94,10 @@ export default class OfferService implements OfferServiceInterface {
     return deletedOffer;
   }
 
-  public async updateCommentData(dto: UpdateCommentDataDto): Promise<void> {
-    const {offerId, commentsCount, rating} = dto;
-    await this.offerModel
-      .findByIdAndUpdate(offerId,
-        {
-          '$set': {
-            commentsCount: commentsCount,
-            rating: rating
-          },
-        },
-        {new: true});
-  }
-
   public async checkOwnership(userId: string, offerId: string): Promise<boolean> {
     const offer = await this.offerModel
       .findById(offerId)
-      .populate('userId')
+      .populate('hostId')
       .exec();
     const ownerId = offer?.hostId?._id.toString();
     return ownerId === userId;

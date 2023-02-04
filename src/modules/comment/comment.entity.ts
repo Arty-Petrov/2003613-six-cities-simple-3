@@ -1,6 +1,7 @@
 import typegoose, { defaultClasses, getModelForClass, Ref } from '@typegoose/typegoose';
 import { OfferEntity } from '../offer/offer.entity.js';
 import { UserEntity } from '../user/user.entity.js';
+import { RatingRange, TextLength } from './comment.constant.js';
 
 const {prop, modelOptions} = typegoose;
 
@@ -15,8 +16,8 @@ export class CommentEntity extends defaultClasses.TimeStamps {
   @prop({
     required: true,
     trim: true,
-    minlength: 5,
-    maxlength: 1024
+    minlength: TextLength.Min,
+    maxlength: TextLength.Max,
   })
   public text!: string;
 
@@ -28,9 +29,8 @@ export class CommentEntity extends defaultClasses.TimeStamps {
 
   @prop({
     required: true,
-    min: 1,
-    max: 5,
-    default: 1
+    min: RatingRange.Min,
+    max: RatingRange.Max,
   })
   public rating!: number;
 
