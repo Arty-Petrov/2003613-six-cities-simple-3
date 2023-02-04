@@ -8,10 +8,8 @@ export const OFFER_FILES_UPLOAD_FIELDS = [
 ];
 
 export const OfferDefault = {
-  CommentsCount: 0,
   PhotosCount: 6,
   ListCount: 60,
-  Rating: null,
 } as const;
 
 export const TitleLength = {
@@ -37,26 +35,6 @@ export const GuestsRange = {
 export const PriceRange = {
   Min: 100,
   Max: 100000,
-} as const;
-
-export const OfferApiDescription = {
-  Id: 'The offer Id',
-  Title: `The offer title, min ${TitleLength.Min}, max ${TitleLength.Max} chars length`,
-  Description: `The offer description, min ${DescriptionLength.Min}, max ${DescriptionLength.Max} chars length`,
-  PostDate: 'The offer post date (ISO format)',
-  City: `The offer city name, any of these values: ${Object.values(City).join(', ')}\``,
-  Preview: 'The offer picture, file type *.png/jpg/jpeg',
-  Photos: `The offer photos, always ${OfferDefault.PhotosCount} file type *.png/jpg/jpeg`,
-  IsPremium: 'The premium offer boolean flag',
-  Rating: 'The offer rating, it is calculated by the service',
-  Lodging: `A one of following lodging type: ${Object.values(Lodging).join(', ')}\``,
-  RoomsCount: `The offer rooms count, min ${RoomsRange.Min}, max ${RoomsRange.Max} chars length`,
-  GuestsCount: `The offer rooms count, min ${GuestsRange.Min}, max ${GuestsRange.Max} chars length`,
-  Price: `The offer price, min ${PriceRange.Min}, max ${PriceRange.Max} chars length`,
-  Features: `Any of features values: ${Object.values(Feature).join(', ')}`,
-  HostId: 'The uniq id of offer publisher',
-  CommentsCount: 'The offer comments count, it is calculated by the service',
-  Location: 'The offer location coordinates',
 } as const;
 
 export const OfferApiError = {

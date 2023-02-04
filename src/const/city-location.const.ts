@@ -1,4 +1,4 @@
-import { City } from '../types/enum.index.js';
+import { City } from '../types/city.enum.js';
 
 const CityLocation = {
   [City.Paris]: {

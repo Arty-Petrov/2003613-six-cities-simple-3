@@ -6,7 +6,7 @@ import { ControllerInterface } from '../common/controller/controller.interface.j
 import { DatabaseInterface } from '../common/database-client/database.interface.js';
 import { ExceptionFilterInterface } from '../common/errors/exception-filter.interface.js';
 import { LoggerInterface } from '../common/logger/logger.interface.js';
-import { Component } from '../types/type.index.js';
+import { Component } from '../types/component.types.js';
 import { getURI } from '../utils/db.js';
 
 @injectable()

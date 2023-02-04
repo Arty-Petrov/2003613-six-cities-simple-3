@@ -10,7 +10,6 @@ import { UploadFileMiddleware } from '../../common/middlewares/upload-file.middl
 import { ValidateDtoMiddleware } from '../../common/middlewares/validate-dto.middleware.js';
 import { ValidateObjectIdMiddleware } from '../../common/middlewares/validate-objectId.middleware.js';
 import { ValidateUploadsCountMiddleware } from '../../common/middlewares/validate-uploads-count.middleware.js';
-import { OfferPhotosCount } from '../../const/const.index.js';
 import { Component } from '../../types/component.types.js';
 import { HttpMethod } from '../../types/http-method.enum.js';
 import { UploadField } from '../../types/upload-field.const.js';
@@ -20,7 +19,7 @@ import CommentResponse from '../comment/response/comment.response.js';
 import CreateOfferDto from './dto/create-offer.dto.js';
 import UpdateOfferDto from './dto/update-offer.dto.js';
 import { OfferServiceInterface } from './offer-service.interface.js';
-import { OFFER_FILES_UPLOAD_FIELDS } from './offer.constant.js';
+import { OFFER_FILES_UPLOAD_FIELDS, OfferDefault } from './offer.constant.js';
 import OfferQuery from './query/offer.query.js';
 import OfferListResponse from './response/offer-list.response.js';
 import OfferSingleResponse from './response/offer-single.response.js';
@@ -90,7 +89,7 @@ export default class OfferController extends Controller {
         new ValidateObjectIdMiddleware('offerId'),
         new DocumentExistsMiddleware(this.offerService, 'Offer', 'offerId'),
         new UploadFileMiddleware(this.configService.get('UPLOAD_DIRECTORY'), OFFER_FILES_UPLOAD_FIELDS),
-        new ValidateUploadsCountMiddleware(UploadField.Photos, OfferPhotosCount.Strict),
+        new ValidateUploadsCountMiddleware(UploadField.Photos, OfferDefault.PhotosCount),
       ]
     });
     this.addRoute({

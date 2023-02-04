@@ -3,7 +3,7 @@ import TSVFileWriter from '../common/file-writer/file-writer.js';
 import CommentMockGenerator from '../common/mock-generator/comment-mock-generator.js';
 import OfferMockGenerator from '../common/mock-generator/offer-mock-generator.js';
 import UserMockGenerator from '../common/mock-generator/user-mock-generator.js';
-import { MockPaths } from '../const/const.index.js';
+import MockPaths from '../const/mock-paths.const.js';
 import { MockData } from '../types/mock-data.type.js';
 import { CliCommandInterface } from './cli-command.interface.js';
 

@@ -1,4 +1,4 @@
-import { MockData } from '../../types/type.index.js';
+import { MockData } from '../../types/mock-data.type.js';
 import { generateRandomValue, getRandomItem } from '../../utils/random.js';
 import { MockGeneratorInterface } from './mock-generator.interface.js';
 

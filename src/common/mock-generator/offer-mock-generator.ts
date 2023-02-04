@@ -1,12 +1,10 @@
-import {
-  CityLocation,
-  LocationValue,
-  OfferGuestsCount,
-  OfferPriceValue,
-  OfferRoomsCount,
-} from '../../const/const.index.js';
-import { City, Feature, Lodging } from '../../types/enum.index.js';
-import { MockData } from '../../types/type.index.js';
+import CityLocation from '../../const/city-location.const.js';
+import LocationValue from '../../const/location-value.const.js';
+import { GuestsRange, PriceRange, RoomsRange } from '../../modules/offer/offer.constant.js';
+import { City } from '../../types/city.enum.js';
+import { Feature } from '../../types/feature.enum.js';
+import { Lodging } from '../../types/lodging.enum.js';
+import { MockData } from '../../types/mock-data.type.js';
 import { generateRandomDate, generateRandomValue, getRandomItem, getRandomItems } from '../../utils/random.js';
 import { LOCATION_THRESHOLD, PostDateRange } from './mock-generator.const.js';
 import { MockGeneratorInterface } from './mock-generator.interface.js';
@@ -23,9 +21,9 @@ export default class OfferMockGenerator implements MockGeneratorInterface {
     const photos = getRandomItems<string>(this.mockData.photos).join(';');
     const isPremium = !!generateRandomValue(0,1);
     const type = getRandomItem<string>(Array.from(Object.values(Lodging)));
-    const roomsCount = generateRandomValue(OfferRoomsCount.Min, OfferRoomsCount.Max).toString();
-    const guestsCount = generateRandomValue(OfferGuestsCount.Min, OfferGuestsCount.Max).toString();
-    const price = generateRandomValue(OfferPriceValue.Min, OfferPriceValue.Max).toString();
+    const roomsCount = generateRandomValue(RoomsRange.Min, RoomsRange.Max).toString();
+    const guestsCount = generateRandomValue(GuestsRange.Min, GuestsRange.Max).toString();
+    const price = generateRandomValue(PriceRange.Min, PriceRange.Max).toString();
     const features = getRandomItems<string>(Array.from(Object.values(Feature))).join(';');
 
     const minLat = CityLocation[city].latitude - LOCATION_THRESHOLD;
