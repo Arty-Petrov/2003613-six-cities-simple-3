@@ -2,12 +2,14 @@ import { ClassConstructor, plainToInstance } from 'class-transformer';
 import { ValidationError } from 'class-validator';
 import * as crypto from 'crypto';
 import * as jose from 'jose';
+import { DEFAULT_STATIC_IMAGES } from '../app/application.constant.js';
 import { City } from '../types/city.enum.js';
 import { Feature } from '../types/feature.enum.js';
 import { Location } from '../types/location.type.js';
 import { Lodging } from '../types/lodging.enum.js';
 import { Offer } from '../types/offer.type.js';
 import { ServiceError } from '../types/service-error.enum.js';
+import { UnknownObject } from '../types/unknown-object.type.js';
 import { ValidationErrorField } from '../types/validation-error-field.type.js';
 
 export const createComment = (row: string) => {
@@ -75,6 +77,30 @@ export const multerFilesToDTO = (files: Record<string, Array<Record<string, stri
 };
 
 export const getFullServerPath = (host: string, port: number) => `http://${host}:${port}`;
+const isObject = (value: unknown) => typeof value === 'object' && value !== null;
+
+export const transformProperty = (
+  property: string,
+  someObject: UnknownObject,
+  transformFn: (object: UnknownObject) => void
+) => {
+  Object.keys(someObject)
+    .forEach((key) => {
+      if (key === property) {
+        transformFn(someObject);
+      } else if (isObject(someObject[key])) {
+        transformProperty(property, someObject[key] as UnknownObject, transformFn);
+      }
+    });
+};
+
+export const transformObject = (properties: string[], staticPath: string, uploadPath: string, data:UnknownObject) => {
+  properties
+    .forEach((property) => transformProperty(property, data, (target: UnknownObject) => {
+      const rootPath = DEFAULT_STATIC_IMAGES.includes(target[property] as string) ? staticPath : uploadPath;
+      target[property] = `${rootPath}/${target[property]}`;
+    }));
+};
 
 export const createSHA256 = (line: string, salt: string): string => {
   const shaHasher = crypto.createHmac('sha256', salt);

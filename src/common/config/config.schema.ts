@@ -14,6 +14,7 @@ export type ConfigSchema = {
   UPLOAD_DIRECTORY: string
   JWT_SECRET: string;
   HOST: string,
+  STATIC_DIRECTORY_PATH: string;
 }
 
 export const configSchema = convict<ConfigSchema>({
@@ -76,5 +77,11 @@ export const configSchema = convict<ConfigSchema>({
     format: String,
     env: 'HOST',
     default: 'localhost'
+  },
+  STATIC_DIRECTORY_PATH: {
+    doc: 'Path to directory with static resources',
+    format: String,
+    env: 'STATIC_DIRECTORY_PATH',
+    default: 'static'
   }
 });
