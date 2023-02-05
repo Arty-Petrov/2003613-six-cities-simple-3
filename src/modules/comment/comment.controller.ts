@@ -4,6 +4,7 @@ import { inject } from 'inversify';
 import { Controller } from '../../common/controller/controller.js';
 import HttpError from '../../common/errors/http-error.js';
 import { LoggerInterface } from '../../common/logger/logger.interface.js';
+import { PrivateRouteMiddleware } from '../../common/middlewares/private-route.middleware.js';
 import { ValidateDtoMiddleware } from '../../common/middlewares/validate-dto.middleware.js';
 import { Component } from '../../types/component.types.js';
 import { HttpMethod } from '../../types/http-method.enum.js';
@@ -27,13 +28,14 @@ export default class CommentController extends Controller {
       method: HttpMethod.Post,
       handler: this.create,
       middlewares: [
+        new PrivateRouteMiddleware(),
         new ValidateDtoMiddleware(CreateCommentDto)
       ]
     });
   }
 
   public async create(
-    {body}: Request<object, object, CreateCommentDto>,
+    {user, body}: Request<object, object, CreateCommentDto>,
     res: Response
   ): Promise<void> {
 
@@ -44,8 +46,7 @@ export default class CommentController extends Controller {
         'CommentController'
       );
     }
-    const comment = await this.commentService.create(body);
+    const comment = await this.commentService.create({...body, userId: user.id});
     this.created(res, fillDTO(CommentResponse, comment));
   }
 }
-

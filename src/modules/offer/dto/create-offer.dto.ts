@@ -6,7 +6,6 @@ import {
   IsDefined,
   IsEnum,
   IsInt,
-  IsMongoId,
   IsNotEmptyObject,
   IsObject,
   Length,
@@ -100,9 +99,6 @@ export default class CreateOfferDto {
   })
   public features!: Feature[];
 
-  @IsMongoId({
-    message: OfferApiError.HostIdIsInvalid
-  })
   public hostId!: string;
 
   @IsDefined()

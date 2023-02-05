@@ -1,5 +1,6 @@
 import { ClassConstructor, plainToInstance } from 'class-transformer';
 import * as crypto from 'crypto';
+import * as jose from 'jose';
 import { City } from '../types/city.enum.js';
 import { Feature } from '../types/feature.enum.js';
 import { Location } from '../types/location.type.js';
@@ -82,3 +83,10 @@ export const multerFilesToDTO = (files: Record<string, Array<Record<string, stri
 
   return dto;
 };
+
+export const createJWT = async (algorithm: string, jwtSecret: string, payload: object): Promise<string> =>
+  new jose.SignJWT({...payload})
+    .setProtectedHeader({ alg: algorithm})
+    .setIssuedAt()
+    .setExpirationTime('2d')
+    .sign(crypto.createSecretKey(jwtSecret, 'utf-8'));
