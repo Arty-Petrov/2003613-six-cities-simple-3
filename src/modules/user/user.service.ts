@@ -6,7 +6,7 @@ import CreateUserDto from './dto/create-user.dto.js';
 import LoginUserDto from './dto/login-user.dto.js';
 import UpdateUserDto from './dto/update-user.dto.js';
 import { UserServiceInterface } from './user-service.interface.js';
-import { UserDefault } from './user.constant.js';
+import { DEFAULT_AVATAR_FILE_NAME } from './user.constant.js';
 import { UserEntity } from './user.entity.js';
 
 @injectable()
@@ -17,7 +17,7 @@ export default class UserService implements UserServiceInterface {
   ) {}
 
   public async create(dto: CreateUserDto, salt: string): Promise<DocumentType<UserEntity>> {
-    const user = new UserEntity({...dto, avatarUrl: UserDefault.AvatarFileName});
+    const user = new UserEntity({...dto, avatar: DEFAULT_AVATAR_FILE_NAME});
     user.setPassword(dto.password, salt);
 
     const result = await this.userModel.create(user);
@@ -41,6 +41,7 @@ export default class UserService implements UserServiceInterface {
   }
 
   public async updateById(userId: string, dto: UpdateUserDto): Promise<DocumentType<UserEntity> | null> {
+    console.log(dto);
     return this.userModel
       .findByIdAndUpdate(userId, dto, {new: true})
       .exec();
@@ -58,10 +59,5 @@ export default class UserService implements UserServiceInterface {
     }
 
     return null;
-  }
-
-  public async exists(documentId: string): Promise<boolean> {
-    return (await this.userModel
-      .exists({_id: documentId})) !== null;
   }
 }

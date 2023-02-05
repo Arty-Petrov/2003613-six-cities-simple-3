@@ -1,4 +1,4 @@
-import { Expose, Transform } from 'class-transformer';
+import { Expose } from 'class-transformer';
 
 export default class UserResponse {
   @Expose()
@@ -11,8 +11,7 @@ export default class UserResponse {
   public name!: string;
 
   @Expose()
-  @Transform(({ value }) => `http://localhost:4000/upload/avatar/${value}`)
-  public avatarUrl!: string;
+  public avatar!: string;
 
   @Expose()
   public isPro!: boolean;

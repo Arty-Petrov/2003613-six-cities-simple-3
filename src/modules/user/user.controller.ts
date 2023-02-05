@@ -8,11 +8,11 @@ import HttpError from '../../common/errors/http-error.js';
 import { LoggerInterface } from '../../common/logger/logger.interface.js';
 import { PrivateRouteMiddleware } from '../../common/middlewares/private-route.middleware.js';
 import { UploadFileMiddleware } from '../../common/middlewares/upload-file.middleware.js';
+import { ValidateAnonymousMiddleware } from '../../common/middlewares/validate-anonymous.middleware.js';
 import { ValidateDtoMiddleware } from '../../common/middlewares/validate-dto.middleware.js';
-import { ValidateObjectIdMiddleware } from '../../common/middlewares/validate-objectId.middleware.js';
+import { UploadField } from '../../const/upload-field.const.js';
 import { Component } from '../../types/component.types.js';
 import { HttpMethod } from '../../types/http-method.enum.js';
-import { UploadField } from '../../types/upload-field.const.js';
 import { createJWT, fillDTO, multerFilesToDTO } from '../../utils/common.js';
 import CreateUserDto from './dto/create-user.dto.js';
 import LoginUserDto from './dto/login-user.dto.js';
@@ -26,10 +26,10 @@ import { JWT_ALGORITHM, USER_FILES_UPLOAD_FIELDS } from './user.constant.js';
 export default class UserController extends Controller {
   constructor(
     @inject(Component.LoggerInterface) logger: LoggerInterface,
-    @inject(Component.ConfigInterface) private readonly configService: ConfigInterface,
+    @inject(Component.ConfigInterface) configService: ConfigInterface,
     @inject(Component.UserServiceInterface) private readonly userService: UserServiceInterface,
   ) {
-    super(logger);
+    super(logger, configService);
     this.logger.info('Register routes for UserController…');
 
     this.addRoute({
@@ -37,6 +37,7 @@ export default class UserController extends Controller {
       method: HttpMethod.Post,
       handler: this.create,
       middlewares: [
+        new ValidateAnonymousMiddleware(),
         new ValidateDtoMiddleware(CreateUserDto)
       ]
     });
@@ -57,12 +58,11 @@ export default class UserController extends Controller {
       ]
     });
     this.addRoute({
-      path: '/:userId/avatar',
+      path: '/avatar',
       method: HttpMethod.Post,
       handler: this.uploadAvatar,
       middlewares: [
         new PrivateRouteMiddleware(),
-        new ValidateObjectIdMiddleware('userId'),
         new UploadFileMiddleware(this.configService.get('UPLOAD_DIRECTORY'), USER_FILES_UPLOAD_FIELDS),
       ]
     });
@@ -91,7 +91,6 @@ export default class UserController extends Controller {
     );
   }
 
-
   public async login(
     {body}: Request<Record<string, unknown>, Record<string, unknown>, LoginUserDto>,
     res: Response,
@@ -112,16 +111,17 @@ export default class UserController extends Controller {
       { email: user.email, id: user.id}
     );
 
-    this.ok(res, fillDTO(LoggedUserResponse, {email: user.email, token}));
+    this.ok(res, fillDTO(LoggedUserResponse, {
+      ...fillDTO(LoggedUserResponse, user),
+      token
+    }));
   }
 
-  public async uploadAvatar(req: Request, res: Response) {
-    const {files, params: {userId}} = req;
-
+  public async uploadAvatar({files, user: {id}}: Request, res: Response) {
     const fileName = multerFilesToDTO(instanceToPlain(files), 'filename');
-    const avatarUrl = {avatarUrl: fileName[UploadField.Avatar][0]};
-    await this.userService.updateById(userId, avatarUrl);
-    this.created(res, fillDTO(UploadUserAvatarResponse, avatarUrl));
+    const avatar = {avatar: fileName[UploadField.Avatar][0]};
+    await this.userService.updateById(id, {...avatar});
+    this.created(res, fillDTO(UploadUserAvatarResponse, avatar));
   }
 
   public async check(req: Request, res: Response): Promise<void> {

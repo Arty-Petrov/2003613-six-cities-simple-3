@@ -6,7 +6,7 @@ import { SortOrder } from '../../types/sort-order.enum.js';
 import CreateOfferDto from './dto/create-offer.dto.js';
 import UpdateOfferDto from './dto/update-offer.dto.js';
 import { OfferServiceInterface } from './offer-service.interface.js';
-import { OfferDefault } from './offer.constant.js';
+import { DEFAULT_PHOTOS_FILE_NAMES, DEFAULT_PREVIEW_FILE_NAME, OfferDefault } from './offer.constant.js';
 import { OfferEntity } from './offer.entity.js';
 import OfferQuery from './query/offer.query.js';
 
@@ -19,7 +19,11 @@ export default class OfferService implements OfferServiceInterface {
   ) {}
 
   public async create(dto: CreateOfferDto): Promise<DocumentType<OfferEntity>> {
-    const result = await this.offerModel.create(dto);
+    const result = await this.offerModel
+      .create({...dto,
+        preview: DEFAULT_PREVIEW_FILE_NAME,
+        photos: DEFAULT_PHOTOS_FILE_NAMES,
+      });
     this.logger.info(`New offer created: ${dto.title}`);
     return result;
   }
@@ -27,6 +31,15 @@ export default class OfferService implements OfferServiceInterface {
   public async exists(documentId: string): Promise<boolean> {
     return (await this.offerModel
       .exists({_id: documentId})) !== null;
+  }
+
+  public async checkOwnership(userId: string, documentId: string): Promise<boolean> {
+    const offer = await this.offerModel
+      .findById(documentId)
+      .populate('hostId')
+      .exec();
+    const ownerId = offer?.hostId?._id.toString();
+    return ownerId === userId;
   }
 
   public async find(query: OfferQuery): Promise<DocumentType<OfferEntity>[]> {
@@ -92,14 +105,5 @@ export default class OfferService implements OfferServiceInterface {
     const deletedOffer = await this.offerModel.findByIdAndDelete(offerId).exec();
     this.logger.info(`Offer ${offerId} and its comments are deleted`);
     return deletedOffer;
-  }
-
-  public async checkOwnership(userId: string, offerId: string): Promise<boolean> {
-    const offer = await this.offerModel
-      .findById(offerId)
-      .populate('hostId')
-      .exec();
-    const ownerId = offer?.hostId?._id.toString();
-    return ownerId === userId;
   }
 }

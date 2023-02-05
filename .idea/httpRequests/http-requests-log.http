@@ -1,3 +1,998 @@
+POST http://localhost:4000/offers/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImZyZWVkb21AcGlzZW0ubG9jYWwiLCJpZCI6IjYzZGZkODk5ZWVlODgyNzYwNjBkMjM4MSIsImlhdCI6MTY3NTYxNDUyNCwiZXhwIjoxNjc1Nzg3MzI0fQ.b6WGtn1xXRqj7iJfkXQrrGXLIL1pkBn-INBFR-Opk4s
+Content-Type: application/json
+Content-Length: 527
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "Билли Саммерс",
+  "description": "У нас тут все ништяк. Ларек за углом. Шава 24 часа. Приезжайте! Интернетов нет!",
+  "postDate": "2021-02-01T11:56:37.573Z",
+  "city": "Paris",
+  "isPremium": true,
+  "lodging": "apartment",
+  "roomsCount": 2,
+  "guestsCount": 6,
+  "price": 75161,
+  "features": ["Washer","Towels","Fridge"],
+  "hostId": "63dbe04c9d4c8f2da57f6ffe",
+  "location": {
+    "latitude": 40.88414,
+    "longitude": 142.793509
+    }
+}
+
+<> 2023-02-05T211053.201.json
+
+###
+
+POST http://localhost:4000/offers/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImZyZWVkb21AcGlzZW0ubG9jYWwiLCJpZCI6IjYzZGZkODk5ZWVlODgyNzYwNjBkMjM4MSIsImlhdCI6MTY3NTYxNDUyNCwiZXhwIjoxNjc1Nzg3MzI0fQ.b6WGtn1xXRqj7iJfkXQrrGXLIL1pkBn-INBFR-Opk4s
+Content-Type: application/json
+Content-Length: 527
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "Билли Саммерс",
+  "description": "У нас тут все ништяк. Ларек за углом. Шава 24 часа. Приезжайте! Интернетов нет!",
+  "postDate": "2021-02-01T11:56:37.573Z",
+  "city": "Paris",
+  "isPremium": true,
+  "lodging": "apartment",
+  "roomsCount": 2,
+  "guestsCount": 6,
+  "price": 75161,
+  "features": ["Washer","Towels","Fridge"],
+  "hostId": "63dbe04c9d4c8f2da57f6ffe",
+  "location": {
+    "latitude": 40.88414,
+    "longitude": 142.793509
+    }
+}
+
+<> 2023-02-05T210907.201.json
+
+###
+
+POST http://localhost:4000/offers/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImZyZWVkb21AcGlzZW0ubG9jYWwiLCJpZCI6IjYzZGZkODk5ZWVlODgyNzYwNjBkMjM4MSIsImlhdCI6MTY3NTYxNDUyNCwiZXhwIjoxNjc1Nzg3MzI0fQ.b6WGtn1xXRqj7iJfkXQrrGXLIL1pkBn-INBFR-Opk4s
+Content-Type: application/json
+Content-Length: 527
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "Билли Саммерс",
+  "description": "У нас тут все ништяк. Ларек за углом. Шава 24 часа. Приезжайте! Интернетов нет!",
+  "postDate": "2021-02-01T11:56:37.573Z",
+  "city": "Paris",
+  "isPremium": true,
+  "lodging": "apartment",
+  "roomsCount": 2,
+  "guestsCount": 6,
+  "price": 75161,
+  "features": ["Washer","Towels","Fridge"],
+  "hostId": "63dbe04c9d4c8f2da57f6ffe",
+  "location": {
+    "latitude": 40.88414,
+    "longitude": 142.793509
+    }
+}
+
+<> 2023-02-05T210755.201.json
+
+###
+
+POST http://localhost:4000/offers/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImZyZWVkb21AcGlzZW0ubG9jYWwiLCJpZCI6IjYzZGZkODk5ZWVlODgyNzYwNjBkMjM4MSIsImlhdCI6MTY3NTYxNDUyNCwiZXhwIjoxNjc1Nzg3MzI0fQ.b6WGtn1xXRqj7iJfkXQrrGXLIL1pkBn-INBFR-Opk4s
+Content-Type: application/json
+Content-Length: 527
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "Билли Саммерс",
+  "description": "У нас тут все ништяк. Ларек за углом. Шава 24 часа. Приезжайте! Интернетов нет!",
+  "postDate": "2021-02-01T11:56:37.573Z",
+  "city": "Paris",
+  "isPremium": true,
+  "lodging": "apartment",
+  "roomsCount": 2,
+  "guestsCount": 6,
+  "price": 75161,
+  "features": ["Washer","Towels","Fridge"],
+  "hostId": "63dbe04c9d4c8f2da57f6ffe",
+  "location": {
+    "latitude": 40.88414,
+    "longitude": 142.793509
+    }
+}
+
+<> 2023-02-05T210314.201.json
+
+###
+
+POST http://localhost:4000/offers/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImZyZWVkb21AcGlzZW0ubG9jYWwiLCJpZCI6IjYzZGZkODk5ZWVlODgyNzYwNjBkMjM4MSIsImlhdCI6MTY3NTYxNDUyNCwiZXhwIjoxNjc1Nzg3MzI0fQ.b6WGtn1xXRqj7iJfkXQrrGXLIL1pkBn-INBFR-Opk4s
+Content-Type: application/json
+Content-Length: 527
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "Билли Саммерс",
+  "description": "У нас тут все ништяк. Ларек за углом. Шава 24 часа. Приезжайте! Интернетов нет!",
+  "postDate": "2021-02-01T11:56:37.573Z",
+  "city": "Paris",
+  "isPremium": true,
+  "lodging": "apartment",
+  "roomsCount": 2,
+  "guestsCount": 6,
+  "price": 75161,
+  "features": ["Washer","Towels","Fridge"],
+  "hostId": "63dbe04c9d4c8f2da57f6ffe",
+  "location": {
+    "latitude": 40.88414,
+    "longitude": 142.793509
+    }
+}
+
+<> 2023-02-05T210019.201.json
+
+###
+
+POST http://localhost:4000/offers/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImZyZWVkb21AcGlzZW0ubG9jYWwiLCJpZCI6IjYzZGZkODk5ZWVlODgyNzYwNjBkMjM4MSIsImlhdCI6MTY3NTYxNDUyNCwiZXhwIjoxNjc1Nzg3MzI0fQ.b6WGtn1xXRqj7iJfkXQrrGXLIL1pkBn-INBFR-Opk4s
+Content-Type: application/json
+Content-Length: 527
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "Билли Саммерс",
+  "description": "У нас тут все ништяк. Ларек за углом. Шава 24 часа. Приезжайте! Интернетов нет!",
+  "postDate": "2021-02-01T11:56:37.573Z",
+  "city": "Paris",
+  "isPremium": true,
+  "lodging": "apartment",
+  "roomsCount": 2,
+  "guestsCount": 6,
+  "price": 75161,
+  "features": ["Washer","Towels","Fridge"],
+  "hostId": "63dbe04c9d4c8f2da57f6ffe",
+  "location": {
+    "latitude": 40.88414,
+    "longitude": 142.793509
+    }
+}
+
+<> 2023-02-05T204333.201.json
+
+###
+
+POST http://localhost:4000/offers/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImZyZWVkb21AcGlzZW0ubG9jYWwiLCJpZCI6IjYzZGZkODk5ZWVlODgyNzYwNjBkMjM4MSIsImlhdCI6MTY3NTYxNDUyNCwiZXhwIjoxNjc1Nzg3MzI0fQ.b6WGtn1xXRqj7iJfkXQrrGXLIL1pkBn-INBFR-Opk4s
+Content-Type: application/json
+Content-Length: 527
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "Билли Саммерс",
+  "description": "У нас тут все ништяк. Ларек за углом. Шава 24 часа. Приезжайте! Интернетов нет!",
+  "postDate": "2021-02-01T11:56:37.573Z",
+  "city": "Paris",
+  "isPremium": true,
+  "lodging": "apartment",
+  "roomsCount": 2,
+  "guestsCount": 6,
+  "price": 75161,
+  "features": ["Washer","Towels","Fridge"],
+  "hostId": "63dbe04c9d4c8f2da57f6ffe",
+  "location": {
+    "latitude": 40.88414,
+    "longitude": 142.793509
+    }
+}
+
+<> 2023-02-05T203113.201.json
+
+###
+
+POST http://localhost:4000/offers/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImZyZWVkb21AcGlzZW0ubG9jYWwiLCJpZCI6IjYzZGZkODk5ZWVlODgyNzYwNjBkMjM4MSIsImlhdCI6MTY3NTYxNDUyNCwiZXhwIjoxNjc1Nzg3MzI0fQ.b6WGtn1xXRqj7iJfkXQrrGXLIL1pkBn-INBFR-Opk4s
+Content-Type: application/json
+Content-Length: 527
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "Билли Саммерс",
+  "description": "У нас тут все ништяк. Ларек за углом. Шава 24 часа. Приезжайте! Интернетов нет!",
+  "postDate": "2021-02-01T11:56:37.573Z",
+  "city": "Paris",
+  "isPremium": true,
+  "lodging": "apartment",
+  "roomsCount": 2,
+  "guestsCount": 6,
+  "price": 75161,
+  "features": ["Washer","Towels","Fridge"],
+  "hostId": "63dbe04c9d4c8f2da57f6ffe",
+  "location": {
+    "latitude": 40.88414,
+    "longitude": 142.793509
+    }
+}
+
+<> 2023-02-05T201603.201.json
+
+###
+
+POST http://localhost:4000/offers/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImZyZWVkb21AcGlzZW0ubG9jYWwiLCJpZCI6IjYzZGZkODk5ZWVlODgyNzYwNjBkMjM4MSIsImlhdCI6MTY3NTYxNDUyNCwiZXhwIjoxNjc1Nzg3MzI0fQ.b6WGtn1xXRqj7iJfkXQrrGXLIL1pkBn-INBFR-Opk4s
+Content-Type: application/json
+Content-Length: 527
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "Билли Саммерс",
+  "description": "У нас тут все ништяк. Ларек за углом. Шава 24 часа. Приезжайте! Интернетов нет!",
+  "postDate": "2021-02-01T11:56:37.573Z",
+  "city": "Paris",
+  "isPremium": true,
+  "lodging": "apartment",
+  "roomsCount": 2,
+  "guestsCount": 6,
+  "price": 75161,
+  "features": ["Washer","Towels","Fridge"],
+  "hostId": "63dbe04c9d4c8f2da57f6ffe",
+  "location": {
+    "latitude": 40.88414,
+    "longitude": 142.793509
+    }
+}
+
+<> 2023-02-05T201239.201.json
+
+###
+
+POST http://localhost:4000/offers/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImZyZWVkb21AcGlzZW0ubG9jYWwiLCJpZCI6IjYzZGZkODk5ZWVlODgyNzYwNjBkMjM4MSIsImlhdCI6MTY3NTYxNDUyNCwiZXhwIjoxNjc1Nzg3MzI0fQ.b6WGtn1xXRqj7iJfkXQrrGXLIL1pkBn-INBFR-Opk4s
+Content-Type: application/json
+Content-Length: 527
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "Билли Саммерс",
+  "description": "У нас тут все ништяк. Ларек за углом. Шава 24 часа. Приезжайте! Интернетов нет!",
+  "postDate": "2021-02-01T11:56:37.573Z",
+  "city": "Paris",
+  "isPremium": true,
+  "lodging": "apartment",
+  "roomsCount": 2,
+  "guestsCount": 6,
+  "price": 75161,
+  "features": ["Washer","Towels","Fridge"],
+  "hostId": "63dbe04c9d4c8f2da57f6ffe",
+  "location": {
+    "latitude": 40.88414,
+    "longitude": 142.793509
+    }
+}
+
+<> 2023-02-05T201032.201.json
+
+###
+
+POST http://localhost:4000/offers/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImZyZWVkb21AcGlzZW0ubG9jYWwiLCJpZCI6IjYzZGZkODk5ZWVlODgyNzYwNjBkMjM4MSIsImlhdCI6MTY3NTYxNDUyNCwiZXhwIjoxNjc1Nzg3MzI0fQ.b6WGtn1xXRqj7iJfkXQrrGXLIL1pkBn-INBFR-Opk4s
+Content-Type: application/json
+Content-Length: 527
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "Билли Саммерс",
+  "description": "У нас тут все ништяк. Ларек за углом. Шава 24 часа. Приезжайте! Интернетов нет!",
+  "postDate": "2021-02-01T11:56:37.573Z",
+  "city": "Paris",
+  "isPremium": true,
+  "lodging": "apartment",
+  "roomsCount": 2,
+  "guestsCount": 6,
+  "price": 75161,
+  "features": ["Washer","Towels","Fridge"],
+  "hostId": "63dbe04c9d4c8f2da57f6ffe",
+  "location": {
+    "latitude": 40.88414,
+    "longitude": 142.793509
+    }
+}
+
+<> 2023-02-05T200525.201.json
+
+###
+
+POST http://localhost:4000/offers/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImZyZWVkb21AcGlzZW0ubG9jYWwiLCJpZCI6IjYzZGZkODk5ZWVlODgyNzYwNjBkMjM4MSIsImlhdCI6MTY3NTYxNDUyNCwiZXhwIjoxNjc1Nzg3MzI0fQ.b6WGtn1xXRqj7iJfkXQrrGXLIL1pkBn-INBFR-Opk4s
+Content-Type: application/json
+Content-Length: 527
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "Билли Саммерс",
+  "description": "У нас тут все ништяк. Ларек за углом. Шава 24 часа. Приезжайте! Интернетов нет!",
+  "postDate": "2021-02-01T11:56:37.573Z",
+  "city": "Paris",
+  "isPremium": true,
+  "lodging": "apartment",
+  "roomsCount": 2,
+  "guestsCount": 6,
+  "price": 75161,
+  "features": ["Washer","Towels","Fridge"],
+  "hostId": "63dbe04c9d4c8f2da57f6ffe",
+  "location": {
+    "latitude": 40.88414,
+    "longitude": 142.793509
+    }
+}
+
+<> 2023-02-05T200250.201.json
+
+###
+
+POST http://localhost:4000/offers/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImZyZWVkb21AcGlzZW0ubG9jYWwiLCJpZCI6IjYzZGZkODk5ZWVlODgyNzYwNjBkMjM4MSIsImlhdCI6MTY3NTYxNDUyNCwiZXhwIjoxNjc1Nzg3MzI0fQ.b6WGtn1xXRqj7iJfkXQrrGXLIL1pkBn-INBFR-Opk4s
+Content-Type: application/json
+Content-Length: 527
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "Билли Саммерс",
+  "description": "У нас тут все ништяк. Ларек за углом. Шава 24 часа. Приезжайте! Интернетов нет!",
+  "postDate": "2021-02-01T11:56:37.573Z",
+  "city": "Paris",
+  "isPremium": true,
+  "lodging": "apartment",
+  "roomsCount": 2,
+  "guestsCount": 6,
+  "price": 75161,
+  "features": ["Washer","Towels","Fridge"],
+  "hostId": "63dbe04c9d4c8f2da57f6ffe",
+  "location": {
+    "latitude": 40.88414,
+    "longitude": 142.793509
+    }
+}
+
+<> 2023-02-05T195940.201.json
+
+###
+
+POST http://localhost:4000/offers/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImZyZWVkb21AcGlzZW0ubG9jYWwiLCJpZCI6IjYzZGZkODk5ZWVlODgyNzYwNjBkMjM4MSIsImlhdCI6MTY3NTYxNDUyNCwiZXhwIjoxNjc1Nzg3MzI0fQ.b6WGtn1xXRqj7iJfkXQrrGXLIL1pkBn-INBFR-Opk4s
+Content-Type: application/json
+Content-Length: 527
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "Билли Саммерс",
+  "description": "У нас тут все ништяк. Ларек за углом. Шава 24 часа. Приезжайте! Интернетов нет!",
+  "postDate": "2021-02-01T11:56:37.573Z",
+  "city": "Paris",
+  "isPremium": true,
+  "lodging": "apartment",
+  "roomsCount": 2,
+  "guestsCount": 6,
+  "price": 75161,
+  "features": ["Washer","Towels","Fridge"],
+  "hostId": "63dbe04c9d4c8f2da57f6ffe",
+  "location": {
+    "latitude": 40.88414,
+    "longitude": 142.793509
+    }
+}
+
+<> 2023-02-05T195742.201.json
+
+###
+
+POST http://localhost:4000/offers/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImZyZWVkb21AcGlzZW0ubG9jYWwiLCJpZCI6IjYzZGZkODk5ZWVlODgyNzYwNjBkMjM4MSIsImlhdCI6MTY3NTYxNDUyNCwiZXhwIjoxNjc1Nzg3MzI0fQ.b6WGtn1xXRqj7iJfkXQrrGXLIL1pkBn-INBFR-Opk4s
+Content-Type: application/json
+Content-Length: 527
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "Билли Саммерс",
+  "description": "У нас тут все ништяк. Ларек за углом. Шава 24 часа. Приезжайте! Интернетов нет!",
+  "postDate": "2021-02-01T11:56:37.573Z",
+  "city": "Paris",
+  "isPremium": true,
+  "lodging": "apartment",
+  "roomsCount": 2,
+  "guestsCount": 6,
+  "price": 75161,
+  "features": ["Washer","Towels","Fridge"],
+  "hostId": "63dbe04c9d4c8f2da57f6ffe",
+  "location": {
+    "latitude": 40.88414,
+    "longitude": 142.793509
+    }
+}
+
+<> 2023-02-05T195506.201.json
+
+###
+
+POST http://localhost:4000/offers/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImZyZWVkb21AcGlzZW0ubG9jYWwiLCJpZCI6IjYzZGZkODk5ZWVlODgyNzYwNjBkMjM4MSIsImlhdCI6MTY3NTYxNDUyNCwiZXhwIjoxNjc1Nzg3MzI0fQ.b6WGtn1xXRqj7iJfkXQrrGXLIL1pkBn-INBFR-Opk4s
+Content-Type: application/json
+Content-Length: 527
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "Билли Саммерс",
+  "description": "У нас тут все ништяк. Ларек за углом. Шава 24 часа. Приезжайте! Интернетов нет!",
+  "postDate": "2021-02-01T11:56:37.573Z",
+  "city": "Paris",
+  "isPremium": true,
+  "lodging": "apartment",
+  "roomsCount": 2,
+  "guestsCount": 6,
+  "price": 75161,
+  "features": ["Washer","Towels","Fridge"],
+  "hostId": "63dbe04c9d4c8f2da57f6ffe",
+  "location": {
+    "latitude": 40.88414,
+    "longitude": 142.793509
+    }
+}
+
+<> 2023-02-05T195156.201.json
+
+###
+
+POST http://localhost:4000/offers/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImZyZWVkb21AcGlzZW0ubG9jYWwiLCJpZCI6IjYzZGZkODk5ZWVlODgyNzYwNjBkMjM4MSIsImlhdCI6MTY3NTYxNDUyNCwiZXhwIjoxNjc1Nzg3MzI0fQ.b6WGtn1xXRqj7iJfkXQrrGXLIL1pkBn-INBFR-Opk4s
+Content-Type: application/json
+Content-Length: 527
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "Билли Саммерс",
+  "description": "У нас тут все ништяк. Ларек за углом. Шава 24 часа. Приезжайте! Интернетов нет!",
+  "postDate": "2021-02-01T11:56:37.573Z",
+  "city": "Paris",
+  "isPremium": true,
+  "lodging": "apartment",
+  "roomsCount": 2,
+  "guestsCount": 6,
+  "price": 75161,
+  "features": ["Washer","Towels","Fridge"],
+  "hostId": "63dbe04c9d4c8f2da57f6ffe",
+  "location": {
+    "latitude": 40.88414,
+    "longitude": 142.793509
+    }
+}
+
+<> 2023-02-05T195014.201.json
+
+###
+
+POST http://localhost:4000/offers/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImZyZWVkb21AcGlzZW0ubG9jYWwiLCJpZCI6IjYzZGZkODk5ZWVlODgyNzYwNjBkMjM4MSIsImlhdCI6MTY3NTYxNDUyNCwiZXhwIjoxNjc1Nzg3MzI0fQ.b6WGtn1xXRqj7iJfkXQrrGXLIL1pkBn-INBFR-Opk4s
+Content-Type: application/json
+Content-Length: 527
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "Билли Саммерс",
+  "description": "У нас тут все ништяк. Ларек за углом. Шава 24 часа. Приезжайте! Интернетов нет!",
+  "postDate": "2021-02-01T11:56:37.573Z",
+  "city": "Paris",
+  "isPremium": true,
+  "lodging": "apartment",
+  "roomsCount": 2,
+  "guestsCount": 6,
+  "price": 75161,
+  "features": ["Washer","Towels","Fridge"],
+  "hostId": "63dbe04c9d4c8f2da57f6ffe",
+  "location": {
+    "latitude": 40.88414,
+    "longitude": 142.793509
+    }
+}
+
+<> 2023-02-05T193422.201.json
+
+###
+
+POST http://localhost:4000/offers/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImZyZWVkb21AcGlzZW0ubG9jYWwiLCJpZCI6IjYzZGZkODk5ZWVlODgyNzYwNjBkMjM4MSIsImlhdCI6MTY3NTYxNDUyNCwiZXhwIjoxNjc1Nzg3MzI0fQ.b6WGtn1xXRqj7iJfkXQrrGXLIL1pkBn-INBFR-Opk4s
+Content-Type: application/json
+Content-Length: 527
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "Билли Саммерс",
+  "description": "У нас тут все ништяк. Ларек за углом. Шава 24 часа. Приезжайте! Интернетов нет!",
+  "postDate": "2021-02-01T11:56:37.573Z",
+  "city": "Paris",
+  "isPremium": true,
+  "lodging": "apartment",
+  "roomsCount": 2,
+  "guestsCount": 6,
+  "price": 75161,
+  "features": ["Washer","Towels","Fridge"],
+  "hostId": "63dbe04c9d4c8f2da57f6ffe",
+  "location": {
+    "latitude": 40.88414,
+    "longitude": 142.793509
+    }
+}
+
+<> 2023-02-05T193405.201.json
+
+###
+
+POST http://localhost:4000/offers/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImZyZWVkb21AcGlzZW0ubG9jYWwiLCJpZCI6IjYzZGZkODk5ZWVlODgyNzYwNjBkMjM4MSIsImlhdCI6MTY3NTYxNDUyNCwiZXhwIjoxNjc1Nzg3MzI0fQ.b6WGtn1xXRqj7iJfkXQrrGXLIL1pkBn-INBFR-Opk4s
+Content-Type: application/json
+Content-Length: 527
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "Билли Саммерс",
+  "description": "У нас тут все ништяк. Ларек за углом. Шава 24 часа. Приезжайте! Интернетов нет!",
+  "postDate": "2021-02-01T11:56:37.573Z",
+  "city": "Paris",
+  "isPremium": true,
+  "lodging": "apartment",
+  "roomsCount": 2,
+  "guestsCount": 6,
+  "price": 75161,
+  "features": ["Washer","Towels","Fridge"],
+  "hostId": "63dbe04c9d4c8f2da57f6ffe",
+  "location": {
+    "latitude": 40.88414,
+    "longitude": 142.793509
+    }
+}
+
+<> 2023-02-05T193115.201.json
+
+###
+
+POST http://localhost:4000/offers/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImZyZWVkb21AcGlzZW0ubG9jYWwiLCJpZCI6IjYzZGZkODk5ZWVlODgyNzYwNjBkMjM4MSIsImlhdCI6MTY3NTYxNDUyNCwiZXhwIjoxNjc1Nzg3MzI0fQ.b6WGtn1xXRqj7iJfkXQrrGXLIL1pkBn-INBFR-Opk4s
+Content-Type: application/json
+Content-Length: 527
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "Билли Саммерс",
+  "description": "У нас тут все ништяк. Ларек за углом. Шава 24 часа. Приезжайте! Интернетов нет!",
+  "postDate": "2021-02-01T11:56:37.573Z",
+  "city": "Paris",
+  "isPremium": true,
+  "lodging": "apartment",
+  "roomsCount": 2,
+  "guestsCount": 6,
+  "price": 75161,
+  "features": ["Washer","Towels","Fridge"],
+  "hostId": "63dbe04c9d4c8f2da57f6ffe",
+  "location": {
+    "latitude": 40.88414,
+    "longitude": 142.793509
+    }
+}
+
+<> 2023-02-05T193049.201.json
+
+###
+
+POST http://localhost:4000/users/login
+Content-Type: application/json
+Content-Length: 60
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "freedom@pisem.local",
+  "password": "123456"
+}
+
+<> 2023-02-05T192844.200.json
+
+###
+
+POST http://localhost:4000/users/login
+Content-Type: application/json
+Content-Length: 60
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "freedom@pisem.local",
+  "password": "123456"
+}
+
+<> 2023-02-05T192714.200.json
+
+###
+
+POST http://localhost:4000/users/login
+Content-Type: application/json
+Content-Length: 60
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "freedom@pisem.local",
+  "password": "123456"
+}
+
+<> 2023-02-05T192611.200.json
+
+###
+
+POST http://localhost:4000/users/login
+Content-Type: application/json
+Content-Length: 60
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "freedom@pisem.local",
+  "password": "123456"
+}
+
+<> 2023-02-05T190551.200.json
+
+###
+
+POST http://localhost:4000/users/login
+Content-Type: application/json
+Content-Length: 60
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "freedom@pisem.local",
+  "password": "123456"
+}
+
+<> 2023-02-05T190420.200.json
+
+###
+
+POST http://localhost:4000/users/login
+Content-Type: application/json
+Content-Length: 60
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "freedom@pisem.local",
+  "password": "123456"
+}
+
+<> 2023-02-05T190310.200.json
+
+###
+
+POST http://localhost:4000/users/login
+Content-Type: application/json
+Content-Length: 60
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "freedom@pisem.local",
+  "password": "123456"
+}
+
+<> 2023-02-05T185936.200.json
+
+###
+
+POST http://localhost:4000/users/login
+Content-Type: application/json
+Content-Length: 60
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "freedom@pisem.local",
+  "password": "123456"
+}
+
+<> 2023-02-05T185924.200.json
+
+###
+
+POST http://localhost:4000/users/register
+Content-Type: application/json
+Content-Length: 97
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "Jack",
+  "email": "toranssa@overlook.net",
+  "isPro": true,
+  "password": "123456"
+}
+
+<> 2023-02-05T185736.201.json
+
+###
+
+POST http://localhost:4000/users/avatar
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImZyZWVkb21AcGlzZW0ubG9jYWwiLCJpZCI6IjYzZGJlMDRjOWQ0YzhmMmRhNTdmNmZlNyIsImlhdCI6MTY3NTYxMjU4OCwiZXhwIjoxNjc1Nzg1Mzg4fQ.4e9lJug4cnK_iEsfqmNX6xqYZ2Ae_oCwxnFtn3ep5yk
+Content-Type: multipart/form-data; boundary=WebKitFormBoundary
+Content-Length: 4946
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebKitFormBoundary
+Content-Disposition: form-data; name="avatar"; filename="avatar-angelina.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/avatar-angelina.jpg
+--WebKitFormBoundary--
+
+<> 2023-02-05T185655.201.json
+
+###
+
+POST http://localhost:4000/users/63d968fe50a3b653408f09cf/avatar
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImZyZWVkb21AcGlzZW0ubG9jYWwiLCJpZCI6IjYzZGJlMDRjOWQ0YzhmMmRhNTdmNmZlNyIsImlhdCI6MTY3NTYxMjU4OCwiZXhwIjoxNjc1Nzg1Mzg4fQ.4e9lJug4cnK_iEsfqmNX6xqYZ2Ae_oCwxnFtn3ep5yk
+Content-Type: multipart/form-data; boundary=WebKitFormBoundary
+Content-Length: 4946
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebKitFormBoundary
+Content-Disposition: form-data; name="avatar"; filename="avatar-angelina.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/avatar-angelina.jpg
+--WebKitFormBoundary--
+
+<> 2023-02-05T185636.404.html
+
+###
+
+GET http://localhost:4000/users/login
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImZyZWVkb21AcGlzZW0ubG9jYWwiLCJpZCI6IjYzZGJlMDRjOWQ0YzhmMmRhNTdmNmZlNyIsImlhdCI6MTY3NTYxMjU4OCwiZXhwIjoxNjc1Nzg1Mzg4fQ.4e9lJug4cnK_iEsfqmNX6xqYZ2Ae_oCwxnFtn3ep5yk
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-05T185631.200.json
+
+###
+
+POST http://localhost:4000/users/login
+Content-Type: application/json
+Content-Length: 60
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "freedom@pisem.local",
+  "password": "123456"
+}
+
+<> 2023-02-05T185628.200.json
+
+###
+
+POST http://localhost:4000/users/63d968fe50a3b653408f09cf/avatar
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImZyZWVkb21AcGlzZW0ubG9jYWwiLCJpZCI6IjYzZGJlMDRjOWQ0YzhmMmRhNTdmNmZlNyIsImlhdCI6MTY3NTYxMTY2MCwiZXhwIjoxNjc1Nzg0NDYwfQ.4awCwFzKUNPdgxobrBz4hiKh9e3meVWN1nVzrgSSjtY
+Content-Type: multipart/form-data; boundary=WebKitFormBoundary
+Content-Length: 4946
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebKitFormBoundary
+Content-Disposition: form-data; name="avatar"; filename="avatar-angelina.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/avatar-angelina.jpg
+--WebKitFormBoundary--
+
+<> 2023-02-05T184506.201.json
+
+###
+
+POST http://localhost:4000/users/63d968fe50a3b653408f09cf/avatar
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImZyZWVkb21AcGlzZW0ubG9jYWwiLCJpZCI6IjYzZGJlMDRjOWQ0YzhmMmRhNTdmNmZlNyIsImlhdCI6MTY3NTYxMTY2MCwiZXhwIjoxNjc1Nzg0NDYwfQ.4awCwFzKUNPdgxobrBz4hiKh9e3meVWN1nVzrgSSjtY
+Content-Type: multipart/form-data; boundary=WebKitFormBoundary
+Content-Length: 4946
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebKitFormBoundary
+Content-Disposition: form-data; name="avatar"; filename="avatar-angelina.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/avatar-angelina.jpg
+--WebKitFormBoundary--
+
+<> 2023-02-05T184338.201.json
+
+###
+
+GET http://localhost:4000/users/login
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImZyZWVkb21AcGlzZW0ubG9jYWwiLCJpZCI6IjYzZGJlMDRjOWQ0YzhmMmRhNTdmNmZlNyIsImlhdCI6MTY3NTYxMTY2MCwiZXhwIjoxNjc1Nzg0NDYwfQ.4awCwFzKUNPdgxobrBz4hiKh9e3meVWN1nVzrgSSjtY
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-05T184105.200.json
+
+###
+
+POST http://localhost:4000/users/login
+Content-Type: application/json
+Content-Length: 60
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "freedom@pisem.local",
+  "password": "123456"
+}
+
+<> 2023-02-05T184100.200.json
+
+###
+
+POST http://localhost:4000/users/63d968fe50a3b653408f09cf/avatar
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImZyZWVkb21AcGlzZW0ubG9jYWwiLCJpZCI6IjYzZGJlMDRjOWQ0YzhmMmRhNTdmNmZlNyIsImlhdCI6MTY3NTYxMDU2NSwiZXhwIjoxNjc1NzgzMzY1fQ.JLkCzXME6cgXTln_DzE5Q4LssXQNNNujiy5AselDEjo
+Content-Type: multipart/form-data; boundary=WebKitFormBoundary
+Content-Length: 4946
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebKitFormBoundary
+Content-Disposition: form-data; name="avatar"; filename="avatar-angelina.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/avatar-angelina.jpg
+--WebKitFormBoundary--
+
+<> 2023-02-05T184037.201.json
+
+###
+
+POST http://localhost:4000/users/63d968fe50a3b653408f09cf/avatar
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImZyZWVkb21AcGlzZW0ubG9jYWwiLCJpZCI6IjYzZGJlMDRjOWQ0YzhmMmRhNTdmNmZlNyIsImlhdCI6MTY3NTYxMDU2NSwiZXhwIjoxNjc1NzgzMzY1fQ.JLkCzXME6cgXTln_DzE5Q4LssXQNNNujiy5AselDEjo
+Content-Type: multipart/form-data; boundary=WebKitFormBoundary
+Content-Length: 4946
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebKitFormBoundary
+Content-Disposition: form-data; name="avatar"; filename="avatar-angelina.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/avatar-angelina.jpg
+--WebKitFormBoundary--
+
+<> 2023-02-05T184016.201.json
+
+###
+
+POST http://localhost:4000/users/register
+Content-Type: application/json
+Content-Length: 96
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "Jack",
+  "email": "toranss@overlook.net",
+  "isPro": true,
+  "password": "123456"
+}
+
+<> 2023-02-05T183318.201.json
+
+###
+
+POST http://localhost:4000/users/63d968fe50a3b653408f09cf/avatar
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImZyZWVkb21AcGlzZW0ubG9jYWwiLCJpZCI6IjYzZGJlMDRjOWQ0YzhmMmRhNTdmNmZlNyIsImlhdCI6MTY3NTYxMDU2NSwiZXhwIjoxNjc1NzgzMzY1fQ.JLkCzXME6cgXTln_DzE5Q4LssXQNNNujiy5AselDEjo
+Content-Type: multipart/form-data; boundary=WebKitFormBoundary
+Content-Length: 4946
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebKitFormBoundary
+Content-Disposition: form-data; name="avatar"; filename="avatar-angelina.jpg"
+Content-Type: image/jpeg
+
+< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/avatar-angelina.jpg
+--WebKitFormBoundary--
+
+<> 2023-02-05T182300.201.json
+
+###
+
+POST http://localhost:4000/users/login
+Content-Type: application/json
+Content-Length: 60
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "freedom@pisem.local",
+  "password": "123456"
+}
+
+<> 2023-02-05T182245.200.json
+
+###
+
 GET http://localhost:4000/users/login
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImZyZWVkb21AcGlzZW0ubG9jYWwiLCJpZCI6IjYzZGJlMDRjOWQ0YzhmMmRhNTdmNmZlNyIsImlhdCI6MTY3NTU4ODA0OCwiZXhwIjoxNjc1NzYwODQ4fQ.Yu6fzqk7PffzxXqwLDsUaYLO-4rUqQDnfBu1kGUh0vo
 Connection: Keep-Alive
@@ -71,483 +1066,6 @@ User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 <> 2023-02-05T120317.500.html
-
-###
-
-POST http://localhost:4000/users/login
-Content-Type: application/json
-Content-Length: 60
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email": "freedom@pisem.local",
-  "password": "123456"
-}
-
-<> 2023-02-05T120306.200.json
-
-###
-
-GET http://localhost:4000/users/login
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImZyZWVkb21AcGlzZW0ubG9jYWwiLCJpZCI6IjYzZGJlMDRjOWQ0YzhmMmRhNTdmNmZlNyIsImlhdCI6MTY3NTU4NzcwNywiZXhwIjoxNjc1NzYwNTA3fQ.PIsjvZZHJjOOjlRFNcrB-F-BceU9RRPB6cxjdsWrgMY
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-02-05T120301.500.html
-
-###
-
-GET http://localhost:4000/users/login
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImZyZWVkb21AcGlzZW0ubG9jYWwiLCJpZCI6IjYzZGJlMDRjOWQ0YzhmMmRhNTdmNmZlNyIsImlhdCI6MTY3NTU4NzcwNywiZXhwIjoxNjc1NzYwNTA3fQ.PIsjvZZHJjOOjlRFNcrB-F-BceU9RRPB6cxjdsWrgMY
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-02-05T120153.500.html
-
-###
-
-POST http://localhost:4000/users/login
-Content-Type: application/json
-Content-Length: 60
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email": "freedom@pisem.local",
-  "password": "123456"
-}
-
-<> 2023-02-05T120147.200.json
-
-###
-
-GET http://localhost:4000/users/login
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImZyZWVkb21AcGlzZW0ubG9jYWwiLCJpZCI6IjYzZGJlMDRjOWQ0YzhmMmRhNTdmNmZlNyIsImlhdCI6MTY3NTU4NzU0NSwiZXhwIjoxNjc1NzYwMzQ1fQ.WMzJrwnn8VCOJt-sHy3599j0-KjLRCrFIEec4IJLaBU
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-02-05T120135.500.html
-
-###
-
-GET http://localhost:4000/users/login
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImZyZWVkb21AcGlzZW0ubG9jYWwiLCJpZCI6IjYzZGJlMDRjOWQ0YzhmMmRhNTdmNmZlNyIsImlhdCI6MTY3NTU4NzU0NSwiZXhwIjoxNjc1NzYwMzQ1fQ.WMzJrwnn8VCOJt-sHy3599j0-KjLRCrFIEec4IJLaBU
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-02-05T115922.500.html
-
-###
-
-POST http://localhost:4000/users/login
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImZyZWVkb21AcGlzZW0ubG9jYWwiLCJpZCI6IjYzZGJlMDRjOWQ0YzhmMmRhNTdmNmZlNyIsImlhdCI6MTY3NTU4NzU0NSwiZXhwIjoxNjc1NzYwMzQ1fQ.WMzJrwnn8VCOJt-sHy3599j0-KjLRCrFIEec4IJLaBU
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-02-05T115908.400.json
-
-###
-
-POST http://localhost:4000/users/login
-Content-Type: application/json
-Content-Length: 60
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email": "freedom@pisem.local",
-  "password": "123456"
-}
-
-<> 2023-02-05T115905.200.json
-
-###
-
-POST http://localhost:4000/users/login
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImZyZWVkb21AcGlzZW0ubG9jYWwiLCJpZCI6IjYzZGJlMDRjOWQ0YzhmMmRhNTdmNmZlNyIsImlhdCI6MTY3NTU4NzM0MywiZXhwIjoxNjc1NzYwMTQzfQ.EmJxGTS6ugc6DPhp6gSZzwcdPMACSFP2hBpru9lWixc
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-02-05T115848.400.json
-
-###
-
-POST http://localhost:4000/users/63d968fe50a3b653408f09cf/avatar
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImZyZWVkb21AcGlzZW0ubG9jYWwiLCJpZCI6IjYzZGJlMDRjOWQ0YzhmMmRhNTdmNmZlNyIsImlhdCI6MTY3NTU4NzM0MywiZXhwIjoxNjc1NzYwMTQzfQ.EmJxGTS6ugc6DPhp6gSZzwcdPMACSFP2hBpru9lWixc
-Content-Type: multipart/form-data; boundary=WebKitFormBoundary
-Content-Length: 4946
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
---WebKitFormBoundary
-Content-Disposition: form-data; name="avatar"; filename="avatar-angelina.jpg"
-Content-Type: image/jpeg
-
-< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/avatar-angelina.jpg
---WebKitFormBoundary--
-
-<> 2023-02-05T115731.201.json
-
-###
-
-POST http://localhost:4000/users/63d968fe50a3b653408f09cf/avatar
-Content-Type: multipart/form-data; boundary=WebKitFormBoundary
-Content-Length: 4946
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
---WebKitFormBoundary
-Content-Disposition: form-data; name="avatar"; filename="avatar-angelina.jpg"
-Content-Type: image/jpeg
-
-< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/avatar-angelina.jpg
---WebKitFormBoundary--
-
-<> 2023-02-05T115725.500.html
-
-###
-
-POST http://localhost:4000/users/63d968fe50a3b653408f09cf/avatar
-Content-Type: multipart/form-data; boundary=WebKitFormBoundary
-Content-Length: 4946
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
---WebKitFormBoundary
-Content-Disposition: form-data; name="avatar"; filename="avatar-angelina.jpg"
-Content-Type: image/jpeg
-
-< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/avatar-angelina.jpg
---WebKitFormBoundary--
-
-<> 2023-02-05T115624.201.json
-
-###
-
-POST http://localhost:4000/users/63d968fe50a3b653408f09cf/avatar
-Content-Type: multipart/form-data; boundary=WebKitFormBoundary
-Content-Length: 4946
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
---WebKitFormBoundary
-Content-Disposition: form-data; name="avatar"; filename="avatar-angelina.jpg"
-Content-Type: image/jpeg
-
-< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/avatar-angelina.jpg
---WebKitFormBoundary--
-
-<> 2023-02-05T115608.201.json
-
-###
-
-POST http://localhost:4000/users/login
-Content-Type: application/json
-Content-Length: 60
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email": "freedom@pisem.local",
-  "password": "123456"
-}
-
-<> 2023-02-05T115543.200.json
-
-###
-
-POST http://localhost:4000/users/63d968fe50a3b653408f09cf/avatar
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImZyZWVkb21AcGlzZW0ubG9jYWwiLCJpZCI6IjYzZGJlMDRjOWQ0YzhmMmRhNTdmNmZlNyIsImlhdCI6MTY3NTU4NzI3NiwiZXhwIjoxNjc1NzYwMDc2fQ.ry8LExrK24_uK36Fd-bbc6Bba1wEgJPc37XTq8Aw7FI
-Content-Type: multipart/form-data; boundary=WebKitFormBoundary
-Content-Length: 4946
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
---WebKitFormBoundary
-Content-Disposition: form-data; name="avatar"; filename="avatar-angelina.jpg"
-Content-Type: image/jpeg
-
-< /Users/tema/Documents/htmlacademy/2003613-six-cities-simple-3/markup/img/avatar-angelina.jpg
---WebKitFormBoundary--
-
-<> 2023-02-05T115442.201.json
-
-###
-
-POST http://localhost:4000/users/login
-Content-Type: application/json
-Content-Length: 60
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email": "freedom@pisem.local",
-  "password": "123456"
-}
-
-<> 2023-02-05T115436.200.json
-
-###
-
-GET http://localhost:4000/offers?count=60&city=Brussels&premium=true
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-02-04T220400.200.json
-
-###
-
-GET http://localhost:4000/offers?count=60&city=Brussels&premium=false
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-02-04T220340.200.json
-
-###
-
-GET http://localhost:4000/offers?count=60&city=Brussels&premium=false
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-02-04T220249.200.json
-
-###
-
-GET http://localhost:4000/offers?count=5&city=Brussels&premium=false
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-02-04T220138.200.json
-
-###
-
-GET http://localhost:4000/offers?count=5&city=Brussels&premium=false
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-02-04T214850.200.json
-
-###
-
-GET http://localhost:4000/offers?count=5&city=Brussels&premium=true
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-02-04T214838.200.json
-
-###
-
-GET http://localhost:4000/offers?count=5&city=Brussels&premium=true
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-02-04T214219.200.json
-
-###
-
-GET http://localhost:4000/offers?count=5&city=Brussels&premium=true
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-02-04T214056.200.json
-
-###
-
-GET http://localhost:4000/offers?count=5&city=Brussels&premium=true
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-02-04T214046.200.json
-
-###
-
-GET http://localhost:4000/offers?count=5&city=Brussels
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-02-04T214004.200.json
-
-###
-
-GET http://localhost:4000/offers?count=5
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-02-04T213946.200.json
-
-###
-
-GET http://localhost:4000/offers?count=5&premium=true
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-02-04T213919.200.json
-
-###
-
-GET http://localhost:4000/offers?count=5&city=Brussels&premium=true
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-02-04T213905.200.json
-
-###
-
-GET http://localhost:4000/offers?count=5&city=Brussels&premium=true
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-02-04T213844.200.json
-
-###
-
-GET http://localhost:4000/offers?count=5&city=Brussels&premium=true
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-02-04T213754.200.json
-
-###
-
-GET http://localhost:4000/offers?count=5
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-02-04T213555.200.json
-
-###
-
-GET http://localhost:4000/offers?count=5&premium=true
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-02-04T213537.200.json
-
-###
-
-GET http://localhost:4000/offers?count=5&city=Brussels&premium=true
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-02-04T213522.200.json
-
-###
-
-GET http://localhost:4000/offers?count=5&city=Brussels&premium=true
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-02-04T213423.200.json
-
-###
-
-GET http://localhost:4000/offers?count=5&city=Brussels&premium=true
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-02-04T213323.200.json
-
-###
-
-GET http://localhost:4000/offers?count=5&premium=true
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-02-04T213139.200.json
-
-###
-
-GET http://localhost:4000/offers?count=2&premium=true
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-02-04T213111.200.json
-
-###
-
-GET http://localhost:4000/offers?count=2&premium=true
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-02-04T213058.200.json
-
-###
-
-GET http://localhost:4000/offers?count=2&premium=true
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-02-04T213050.200.json
-
-###
-
-GET http://localhost:4000/offers?count=2&city=Brussels
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-02-04T213026.200.json
-
-###
-
-GET http://localhost:4000/offers?count=2&city=Brussels&premium=true
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-02-04T212952.200.json
-
-###
-
-GET http://localhost:4000/offers?count=2&city=Brussels&premium=true
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-02-04T212710.200.json
 
 ###
 

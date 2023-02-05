@@ -4,7 +4,7 @@ Content-Type: application/json
 
 {
   "name": "Jack",
-  "email": "toranss@overlook.net",
+  "email": "toranssa@overlook.net",
   "isPro": true,
   "password": "123456"
 }
@@ -29,7 +29,7 @@ GET {{baseUrl}}/users/login HTTP/1.1
 Authorization: Bearer {{accessToken}}
 ###
 #@name UPLOAD AVATAR IMAGE
-POST {{baseUrl}}/users/63d968fe50a3b653408f09cf/avatar HTTP/1.1
+POST {{baseUrl}}/users/avatar HTTP/1.1
 Authorization: Bearer {{accessToken}}
 Content-Type: multipart/form-data; boundary=WebKitFormBoundary
 

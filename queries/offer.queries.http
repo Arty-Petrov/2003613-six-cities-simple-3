@@ -1,5 +1,6 @@
 #@name CREATE NEW OFFER
 POST {{baseUrl}}/offers/ HTTP/1.1
+Authorization: Bearer {{accessToken}}
 Content-Type: application/json
 
 {
@@ -36,6 +37,7 @@ GET {{baseUrl}}/offers/{{offerId}}/comments HTTP/1.1
 
 #@name UPDATE OFFER
 PATCH {{baseUrl}}/offers/{{offerId}} HTTP/1.1
+Authorization: Bearer {{accessToken}}
 Content-Type: application/json
 
 {
@@ -46,6 +48,7 @@ Content-Type: application/json
 ###
 #@name UPLOAD OFFER IMAGES
 POST {{baseUrl}}/offers/{{offerId}}/images  HTTP/1.1
+Authorization: Bearer {{accessToken}}
 Content-Type: multipart/form-data; boundary=WebKitFormBoundary
 
 --WebKitFormBoundary
@@ -87,4 +90,5 @@ Content-Type: image/jpeg
 ###
 #@name DELETE OFFER
 DELETE {{baseUrl}}/offers/{{offerId}} HTTP/1.1
+Authorization: Bearer {{accessToken}}
 ###

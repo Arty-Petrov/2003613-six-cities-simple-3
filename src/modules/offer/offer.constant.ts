@@ -1,10 +1,22 @@
+import { DefaultFilenames } from '../../const/default-filenames.const.js';
+import { UploadField } from '../../const/upload-field.const.js';
 import { City } from '../../types/city.enum.js';
 import { Feature } from '../../types/feature.enum.js';
 import { Lodging } from '../../types/lodging.enum.js';
 
+export const DEFAULT_PREVIEW_FILE_NAME = DefaultFilenames.Preview;
+export const DEFAULT_PHOTOS_FILE_NAMES = [
+  DefaultFilenames.Photos,
+  DefaultFilenames.Photos,
+  DefaultFilenames.Photos,
+  DefaultFilenames.Photos,
+  DefaultFilenames.Photos,
+  DefaultFilenames.Photos,
+];
+
 export const OFFER_FILES_UPLOAD_FIELDS = [
-  { name: 'preview', maxCount: 1 },
-  { name: 'photos', maxCount: 6 },
+  { name: UploadField.Preview, maxCount: 1 },
+  { name: UploadField.Photos, maxCount: 6 },
 ];
 
 export const OfferDefault = {
