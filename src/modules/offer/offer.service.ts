@@ -33,6 +33,15 @@ export default class OfferService implements OfferServiceInterface {
       .exists({_id: documentId})) !== null;
   }
 
+  public async checkOwnership(userId: string, documentId: string): Promise<boolean> {
+    const offer = await this.offerModel
+      .findById(documentId)
+      .populate('hostId')
+      .exec();
+    const ownerId = offer?.hostId?._id.toString();
+    return ownerId === userId;
+  }
+
   public async find(query: OfferQuery): Promise<DocumentType<OfferEntity>[]> {
     const {city, premium, limit, sort} = query;
     let matchParams: { [key: string]: string | number | boolean } = {};
@@ -96,14 +105,5 @@ export default class OfferService implements OfferServiceInterface {
     const deletedOffer = await this.offerModel.findByIdAndDelete(offerId).exec();
     this.logger.info(`Offer ${offerId} and its comments are deleted`);
     return deletedOffer;
-  }
-
-  public async checkOwnership(userId: string, offerId: string): Promise<boolean> {
-    const offer = await this.offerModel
-      .findById(offerId)
-      .populate('hostId')
-      .exec();
-    const ownerId = offer?.hostId?._id.toString();
-    return ownerId === userId;
   }
 }

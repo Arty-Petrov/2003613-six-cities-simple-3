@@ -5,6 +5,7 @@ import { inject, injectable } from 'inversify';
 import { ConfigInterface } from '../../common/config/config.interface.js';
 import { Controller } from '../../common/controller/controller.js';
 import { LoggerInterface } from '../../common/logger/logger.interface.js';
+import { AuthorizeOwnerMiddleware } from '../../common/middlewares/authorize-owner.middleware.js';
 import { DocumentExistsMiddleware } from '../../common/middlewares/document-exist.middleware.js';
 import { PrivateRouteMiddleware } from '../../common/middlewares/private-route.middleware.js';
 import { UploadFileMiddleware } from '../../common/middlewares/upload-file.middleware.js';
@@ -79,6 +80,7 @@ export default class OfferController extends Controller {
       handler: this.update,
       middlewares: [
         new PrivateRouteMiddleware(),
+        new AuthorizeOwnerMiddleware(this.offerService,'offerId'),
         new ValidateObjectIdMiddleware('offerId'),
         new ValidateDtoMiddleware(UpdateOfferDto),
         new DocumentExistsMiddleware(this.offerService, 'Offer', 'offerId')
@@ -90,6 +92,7 @@ export default class OfferController extends Controller {
       handler: this.uploadImages,
       middlewares: [
         new PrivateRouteMiddleware(),
+        new AuthorizeOwnerMiddleware(this.offerService,'offerId'),
         new ValidateObjectIdMiddleware('offerId'),
         new DocumentExistsMiddleware(this.offerService, 'Offer', 'offerId'),
         new UploadFileMiddleware(this.configService.get('UPLOAD_DIRECTORY'), OFFER_FILES_UPLOAD_FIELDS),
@@ -102,6 +105,7 @@ export default class OfferController extends Controller {
       handler: this.delete,
       middlewares: [
         new PrivateRouteMiddleware(),
+        new AuthorizeOwnerMiddleware(this.offerService,'offerId'),
         new ValidateObjectIdMiddleware('offerId'),
         new DocumentExistsMiddleware(this.offerService, 'Offer', 'offerId')
       ]
@@ -172,6 +176,7 @@ export default class OfferController extends Controller {
   ): Promise<void> {
     const {offerId} = params;
     const offer = await this.offerService.deleteById(offerId as string);
+    await this.commentService.deleteByOfferId(offerId as string);
 
     this.noContent(res, offer);
   }
