@@ -10,9 +10,9 @@ import { PrivateRouteMiddleware } from '../../common/middlewares/private-route.m
 import { UploadFileMiddleware } from '../../common/middlewares/upload-file.middleware.js';
 import { ValidateDtoMiddleware } from '../../common/middlewares/validate-dto.middleware.js';
 import { ValidateObjectIdMiddleware } from '../../common/middlewares/validate-objectId.middleware.js';
+import { UploadField } from '../../const/upload-field.const.js';
 import { Component } from '../../types/component.types.js';
 import { HttpMethod } from '../../types/http-method.enum.js';
-import { UploadField } from '../../types/upload-field.const.js';
 import { createJWT, fillDTO, multerFilesToDTO } from '../../utils/common.js';
 import CreateUserDto from './dto/create-user.dto.js';
 import LoginUserDto from './dto/login-user.dto.js';
@@ -26,10 +26,10 @@ import { JWT_ALGORITHM, USER_FILES_UPLOAD_FIELDS } from './user.constant.js';
 export default class UserController extends Controller {
   constructor(
     @inject(Component.LoggerInterface) logger: LoggerInterface,
-    @inject(Component.ConfigInterface) private readonly configService: ConfigInterface,
+    @inject(Component.ConfigInterface) configService: ConfigInterface,
     @inject(Component.UserServiceInterface) private readonly userService: UserServiceInterface,
   ) {
-    super(logger);
+    super(logger, configService);
     this.logger.info('Register routes for UserController…');
 
     this.addRoute({

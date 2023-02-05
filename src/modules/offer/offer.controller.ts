@@ -11,9 +11,9 @@ import { UploadFileMiddleware } from '../../common/middlewares/upload-file.middl
 import { ValidateDtoMiddleware } from '../../common/middlewares/validate-dto.middleware.js';
 import { ValidateObjectIdMiddleware } from '../../common/middlewares/validate-objectId.middleware.js';
 import { ValidateUploadsCountMiddleware } from '../../common/middlewares/validate-uploads-count.middleware.js';
+import { UploadField } from '../../const/upload-field.const.js';
 import { Component } from '../../types/component.types.js';
 import { HttpMethod } from '../../types/http-method.enum.js';
-import { UploadField } from '../../types/upload-field.const.js';
 import { fillDTO, multerFilesToDTO } from '../../utils/common.js';
 import { CommentServiceInterface } from '../comment/comment-service.interface.js';
 import CommentResponse from '../comment/response/comment.response.js';
@@ -34,11 +34,11 @@ type ParamsGetOffer = {
 export default class OfferController extends Controller {
   constructor(
     @inject(Component.LoggerInterface) logger: LoggerInterface,
-    @inject(Component.ConfigInterface) private readonly configService: ConfigInterface,
+    @inject(Component.ConfigInterface) configService: ConfigInterface,
     @inject(Component.OfferServiceInterface) private readonly offerService: OfferServiceInterface,
     @inject(Component.CommentServiceInterface) private readonly commentService: CommentServiceInterface,
   ) {
-    super(logger);
+    super(logger, configService);
 
     this.logger.info('Register routes for OfferController…');
     this.addRoute({
