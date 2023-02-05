@@ -1,4 +1,5 @@
 import { ClassConstructor, plainToInstance } from 'class-transformer';
+import { ValidationError } from 'class-validator';
 import * as crypto from 'crypto';
 import * as jose from 'jose';
 import { City } from '../types/city.enum.js';
@@ -6,6 +7,7 @@ import { Feature } from '../types/feature.enum.js';
 import { Location } from '../types/location.type.js';
 import { Lodging } from '../types/lodging.enum.js';
 import { Offer } from '../types/offer.type.js';
+import { ValidationErrorField } from '../types/validation-error-field.type.js';
 
 export const createComment = (row: string) => {
   const tokens = row.replace('\n', '').split('\t');
@@ -90,3 +92,10 @@ export const createJWT = async (algorithm: string, jwtSecret: string, payload: o
     .setIssuedAt()
     .setExpirationTime('2d')
     .sign(crypto.createSecretKey(jwtSecret, 'utf-8'));
+
+export const transformErrors = (errors: ValidationError[]): ValidationErrorField[] =>
+  errors.map(({property, value, constraints}) => ({
+    property,
+    value,
+    messages: constraints ? Object.values(constraints) : []
+  }));
