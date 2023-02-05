@@ -1,3 +1,4 @@
+export const JWT_ALGORITHM = 'HS256';
 export const USER_FILES_UPLOAD_FIELDS = [
   { name: 'avatar', maxCount: 1 },
 ];
