@@ -13,6 +13,7 @@ export type ConfigSchema = {
   DB_NAME: string;
   UPLOAD_DIRECTORY: string
   JWT_SECRET: string;
+  HOST: string,
 }
 
 export const configSchema = convict<ConfigSchema>({
@@ -69,5 +70,11 @@ export const configSchema = convict<ConfigSchema>({
     format: String,
     env: 'JWT_SECRET',
     default: null
+  },
+  HOST: {
+    doc: 'Host where started service',
+    format: String,
+    env: 'HOST',
+    default: 'localhost'
   }
 });

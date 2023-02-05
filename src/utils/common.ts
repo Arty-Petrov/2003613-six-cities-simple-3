@@ -74,6 +74,8 @@ export const multerFilesToDTO = (files: Record<string, Array<Record<string, stri
   return dto;
 };
 
+export const getFullServerPath = (host: string, port: number) => `http://${host}:${port}`;
+
 export const createSHA256 = (line: string, salt: string): string => {
   const shaHasher = crypto.createHmac('sha256', salt);
   return shaHasher.update(line).digest('hex');
