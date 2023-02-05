@@ -1,11 +1,11 @@
-export const JWT_ALGORITHM = 'HS256';
-export const USER_FILES_UPLOAD_FIELDS = [
-  { name: 'avatar', maxCount: 1 },
-];
+import { DefaultFilenames } from '../../const/default-filenames.const.js';
+import { UploadField } from '../../const/upload-field.const.js';
 
-export const UserDefault = {
-  AvatarFileName: 'default-avatar.jpg',
-} as const;
+export const JWT_ALGORITHM = 'HS256';
+export const DEFAULT_AVATAR_FILE_NAME = DefaultFilenames.Avatar;
+export const USER_FILES_UPLOAD_FIELDS = [
+  { name: UploadField.Avatar, maxCount: 1 },
+];
 
 export const NameLength = {
   Min: 1,
