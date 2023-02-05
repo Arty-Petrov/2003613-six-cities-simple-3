@@ -1,3 +1,4 @@
+import cors from 'cors';
 import express, { Express } from 'express';
 import { inject, injectable } from 'inversify';
 import 'reflect-metadata';
@@ -45,6 +46,7 @@ export default class Application {
 
     const authenticateMiddleware = new AuthenticateMiddleware(this.config.get('JWT_SECRET'));
     this.expressApp.use(authenticateMiddleware.execute.bind(authenticateMiddleware));
+    this.expressApp.use(cors());
   }
 
   public async init() {
