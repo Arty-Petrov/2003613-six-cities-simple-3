@@ -33,7 +33,7 @@ export default class CommentController extends Controller {
   }
 
   public async create(
-    {body}: Request<object, object, CreateCommentDto>,
+    {user, body}: Request<object, object, CreateCommentDto>,
     res: Response
   ): Promise<void> {
 
@@ -44,8 +44,7 @@ export default class CommentController extends Controller {
         'CommentController'
       );
     }
-    const comment = await this.commentService.create(body);
+    const comment = await this.commentService.create({...body, userId: user.id});
     this.created(res, fillDTO(CommentResponse, comment));
   }
 }
-

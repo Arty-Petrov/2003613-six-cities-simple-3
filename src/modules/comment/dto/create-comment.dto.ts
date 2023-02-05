@@ -18,7 +18,7 @@ export default class CreateCommentDto {
   })
   public rating!: number;
 
-  public userId?: string;
+  public userId!: string;
 
   @IsMongoId({
     message: CommentApiError.OfferIdIsInvalid

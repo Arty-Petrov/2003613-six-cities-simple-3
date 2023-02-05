@@ -56,6 +56,5 @@ export const OfferApiError = {
   RatingIsInvalid: `Price must be min ${PriceRange.Min}, max ${PriceRange.Max}`,
   FeaturesIsNotArray: 'Features must be an array',
   FeatureIsInvalid: `A feature isn't match any of this values: ${Object.values(Feature).join(', ')}`,
-  HostIdIsInvalid: 'Host is must be a MongoDB id',
   LocationIsInvalid: 'Offer location must contains a object with latitude and longitude coordinates',
 } as const;
