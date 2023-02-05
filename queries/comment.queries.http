@@ -1,5 +1,6 @@
 #@name CREATE NEW COMMENT
 POST {{baseUrl}}/comments/ HTTP/1.1
+Authorization: Bearer {{accessToken}}
 Content-Type: application/json
 
 {
