@@ -8,6 +8,7 @@ import HttpError from '../../common/errors/http-error.js';
 import { LoggerInterface } from '../../common/logger/logger.interface.js';
 import { PrivateRouteMiddleware } from '../../common/middlewares/private-route.middleware.js';
 import { UploadFileMiddleware } from '../../common/middlewares/upload-file.middleware.js';
+import { ValidateAnonymousMiddleware } from '../../common/middlewares/validate-anonymous.middleware.js';
 import { ValidateDtoMiddleware } from '../../common/middlewares/validate-dto.middleware.js';
 import { UploadField } from '../../const/upload-field.const.js';
 import { Component } from '../../types/component.types.js';
@@ -36,6 +37,7 @@ export default class UserController extends Controller {
       method: HttpMethod.Post,
       handler: this.create,
       middlewares: [
+        new ValidateAnonymousMiddleware(),
         new ValidateDtoMiddleware(CreateUserDto)
       ]
     });
@@ -88,7 +90,6 @@ export default class UserController extends Controller {
       fillDTO(UserResponse, result)
     );
   }
-
 
   public async login(
     {body}: Request<Record<string, unknown>, Record<string, unknown>, LoginUserDto>,
