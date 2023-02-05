@@ -20,9 +20,17 @@ Content-Type: application/json
   "email": "freedom@pisem.local",
   "password": "123456"
 }
+> {%
+  client.global.set("accessToken", response.body.token);
+%}
+###
+#@name CHECK USER STATUS
+GET {{baseUrl}}/users/login HTTP/1.1
+Authorization: Bearer {{accessToken}}
 ###
 #@name UPLOAD AVATAR IMAGE
-  POST {{baseUrl}}/users/63d968fe50a3b653408f09cf/avatar HTTP/1.1
+POST {{baseUrl}}/users/63d968fe50a3b653408f09cf/avatar HTTP/1.1
+Authorization: Bearer {{accessToken}}
 Content-Type: multipart/form-data; boundary=WebKitFormBoundary
 
 --WebKitFormBoundary
