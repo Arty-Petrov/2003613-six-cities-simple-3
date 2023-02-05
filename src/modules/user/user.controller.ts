@@ -12,13 +12,14 @@ import { ValidateObjectIdMiddleware } from '../../common/middlewares/validate-ob
 import { Component } from '../../types/component.types.js';
 import { HttpMethod } from '../../types/http-method.enum.js';
 import { UploadField } from '../../types/upload-field.const.js';
-import { fillDTO, multerFilesToDTO } from '../../utils/common.js';
+import { createJWT, fillDTO, multerFilesToDTO } from '../../utils/common.js';
 import CreateUserDto from './dto/create-user.dto.js';
 import LoginUserDto from './dto/login-user.dto.js';
+import LoggedUserResponse from './response/logged-user.response.js';
 import UploadUserAvatarResponse from './response/upload-user-avatar.response.js';
 import UserResponse from './response/user.response.js';
 import { UserServiceInterface } from './user-service.interface.js';
-import { USER_FILES_UPLOAD_FIELDS } from './user.constant.js';
+import { JWT_ALGORITHM, USER_FILES_UPLOAD_FIELDS } from './user.constant.js';
 
 @injectable()
 export default class UserController extends Controller {
@@ -83,23 +84,25 @@ export default class UserController extends Controller {
 
   public async login(
     {body}: Request<Record<string, unknown>, Record<string, unknown>, LoginUserDto>,
-    _res: Response,
+    res: Response,
   ): Promise<void> {
-    const existsUser = await this.userService.findByEmail(body.email);
+    const user = await this.userService.verifyUser(body, this.configService.get('SALT'));
 
-    if (!existsUser) {
+    if (! user) {
       throw new HttpError(
         StatusCodes.UNAUTHORIZED,
-        `User with email ${body.email} not found.`,
-        'UserController',
+        'Unauthorized',
+        'UserController'
       );
     }
 
-    throw new HttpError(
-      StatusCodes.NOT_IMPLEMENTED,
-      'Not implemented',
-      'UserController',
+    const token = await createJWT(
+      JWT_ALGORITHM,
+      this.configService.get('JWT_SECRET'),
+      { email: user.email, id: user.id}
     );
+
+    this.ok(res, fillDTO(LoggedUserResponse, {email: user.email, token}));
   }
 
   public async uploadAvatar(req: Request, res: Response) {
