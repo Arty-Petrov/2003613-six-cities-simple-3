@@ -2,6 +2,16 @@ import { City } from '../../types/city.enum.js';
 import { Feature } from '../../types/feature.enum.js';
 import { Lodging } from '../../types/lodging.enum.js';
 
+export const DEFAULT_PREVIEW_FILE_NAME = 'default-preview.jpg';
+export const DEFAULT_PHOTOS_FILE_NAMES = [
+  'default-photo.jpg',
+  'default-photo.jpg',
+  'default-photo.jpg',
+  'default-photo.jpg',
+  'default-photo.jpg',
+  'default-photo.jpg',
+];
+
 export const OFFER_FILES_UPLOAD_FIELDS = [
   { name: 'preview', maxCount: 1 },
   { name: 'photos', maxCount: 6 },

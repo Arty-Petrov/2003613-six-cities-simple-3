@@ -6,7 +6,7 @@ import { SortOrder } from '../../types/sort-order.enum.js';
 import CreateOfferDto from './dto/create-offer.dto.js';
 import UpdateOfferDto from './dto/update-offer.dto.js';
 import { OfferServiceInterface } from './offer-service.interface.js';
-import { OfferDefault } from './offer.constant.js';
+import { DEFAULT_PHOTOS_FILE_NAMES, DEFAULT_PREVIEW_FILE_NAME, OfferDefault } from './offer.constant.js';
 import { OfferEntity } from './offer.entity.js';
 import OfferQuery from './query/offer.query.js';
 
@@ -19,7 +19,11 @@ export default class OfferService implements OfferServiceInterface {
   ) {}
 
   public async create(dto: CreateOfferDto): Promise<DocumentType<OfferEntity>> {
-    const result = await this.offerModel.create(dto);
+    const result = await this.offerModel
+      .create({...dto,
+        preview: DEFAULT_PREVIEW_FILE_NAME,
+        photos: DEFAULT_PHOTOS_FILE_NAMES,
+      });
     this.logger.info(`New offer created: ${dto.title}`);
     return result;
   }
