@@ -58,7 +58,7 @@ export const createUser = (row: string) => {
   return {
     name: name,
     email: email,
-    avatarUrl: avatarUrl,
+    avatar: avatarUrl,
     isPro: Boolean(isPro),
   };
 };
@@ -87,6 +87,7 @@ export const transformProperty = (
   Object.keys(someObject)
     .forEach((key) => {
       if (key === property) {
+        console.log('transformProperty', key);
         transformFn(someObject);
       } else if (isObject(someObject[key])) {
         transformProperty(property, someObject[key] as UnknownObject, transformFn);
@@ -95,10 +96,16 @@ export const transformProperty = (
 };
 
 export const transformObject = (properties: string[], staticPath: string, uploadPath: string, data:UnknownObject) => {
+  const getRootPath = (fileName: unknown | string) => DEFAULT_STATIC_IMAGES.includes(fileName as string) ? staticPath : uploadPath;
   properties
     .forEach((property) => transformProperty(property, data, (target: UnknownObject) => {
-      const rootPath = DEFAULT_STATIC_IMAGES.includes(target[property] as string) ? staticPath : uploadPath;
-      target[property] = `${rootPath}/${target[property]}`;
+      if (Array.isArray(target[property])){
+        const fileNames = target[property] as unknown[];
+        fileNames.map((fileName) => `${getRootPath(fileName)}/${fileName}`);
+        target = {...target, [property]: fileNames};
+      }
+
+      target[property] = `${getRootPath(target[property])}/${target[property]}`;
     }));
 };
 

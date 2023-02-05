@@ -9,7 +9,7 @@ export default class UpdateUserDto {
   public name?: string;
 
   @IsOptional()
-  public avatarUrl?: string;
+  public avatar?: string;
 
   @IsOptional()
   @IsBoolean()

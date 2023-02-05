@@ -9,7 +9,6 @@ import { LoggerInterface } from '../../common/logger/logger.interface.js';
 import { PrivateRouteMiddleware } from '../../common/middlewares/private-route.middleware.js';
 import { UploadFileMiddleware } from '../../common/middlewares/upload-file.middleware.js';
 import { ValidateDtoMiddleware } from '../../common/middlewares/validate-dto.middleware.js';
-import { ValidateObjectIdMiddleware } from '../../common/middlewares/validate-objectId.middleware.js';
 import { UploadField } from '../../const/upload-field.const.js';
 import { Component } from '../../types/component.types.js';
 import { HttpMethod } from '../../types/http-method.enum.js';
@@ -57,12 +56,11 @@ export default class UserController extends Controller {
       ]
     });
     this.addRoute({
-      path: '/:userId/avatar',
+      path: '/avatar',
       method: HttpMethod.Post,
       handler: this.uploadAvatar,
       middlewares: [
         new PrivateRouteMiddleware(),
-        new ValidateObjectIdMiddleware('userId'),
         new UploadFileMiddleware(this.configService.get('UPLOAD_DIRECTORY'), USER_FILES_UPLOAD_FIELDS),
       ]
     });
@@ -112,16 +110,17 @@ export default class UserController extends Controller {
       { email: user.email, id: user.id}
     );
 
-    this.ok(res, fillDTO(LoggedUserResponse, {email: user.email, token}));
+    this.ok(res, fillDTO(LoggedUserResponse, {
+      ...fillDTO(LoggedUserResponse, user),
+      token
+    }));
   }
 
-  public async uploadAvatar(req: Request, res: Response) {
-    const {files, params: {userId}} = req;
-
+  public async uploadAvatar({files, user: {id}}: Request, res: Response) {
     const fileName = multerFilesToDTO(instanceToPlain(files), 'filename');
-    const avatarUrl = {avatarUrl: fileName[UploadField.Avatar][0]};
-    await this.userService.updateById(userId, avatarUrl);
-    this.created(res, fillDTO(UploadUserAvatarResponse, avatarUrl));
+    const avatar = {avatar: fileName[UploadField.Avatar][0]};
+    await this.userService.updateById(id, {...avatar});
+    this.created(res, fillDTO(UploadUserAvatarResponse, avatar));
   }
 
   public async check(req: Request, res: Response): Promise<void> {

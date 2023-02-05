@@ -1,4 +1,4 @@
-import { Expose, Transform } from 'class-transformer';
+import { Expose } from 'class-transformer';
 import { City } from '../../../types/city.enum.js';
 
 export default class OfferListResponse {
@@ -15,7 +15,6 @@ export default class OfferListResponse {
   public city!: City;
 
   @Expose()
-  @Transform(({ value }) => `http://localhost:4000/upload/preview/${value}`)
   public preview!: string;
 
   @Expose()
